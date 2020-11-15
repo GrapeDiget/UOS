@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class RandomList<T> {
+	private ArrayList<T> list = new ArrayList<T>();
+	private Random rand = new Random();
+	
+	public void add (T item) {
+		list.add(item);
+	}
+	
+	public T select() {
+		int randomValue = rand.nextInt(list.size());
+		T a = list.get(randomValue);
+		return a;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RandomList<Integer> list = new RandomList();
+		for(int i=0; i<10; i++) {
+			list.add(i+1);
+		}
+		
+		for(int i=0; i<10; i++) {
+			System.out.println(list.select());
+		}
+
+		
+		
+		
+	}
+}

@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class RandomList<T> {
+	ArrayList<T> list = new ArrayList<T>();
+	
+	public static void add (T item) {
+		list.add(item);
+	}
+	
+	public T select() {
+		
+		return 
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RandomList.add(1);
+		
+	}
+
+}

@@ -1,0 +1,66 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+class MyLabel extends JLabel {
+	private Random rand = new Random();
+	Color c = Color.RED;
+	
+	public MyLabel(String s) {
+		setText(s);
+		setOpaque(true);
+		setBackground(c);
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.setColor(c);
+		
+	}
+	
+	class MyMouseAdaptor extends MouseAdapter {
+		public void mouseClicked(MouseEvent e) {
+			c = new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255));
+			repaint();
+		}
+	}
+}
+
+class MyPanel extends JPanel {
+	public MyPanel() {
+		setLayout(new GridLayout(4,3));
+				
+		add(new MyLabel("0"));
+		add(new MyLabel("1"));
+		add(new MyLabel("2"));
+		add(new MyLabel("3"));
+		add(new MyLabel("4"));
+		add(new MyLabel("5"));
+		add(new MyLabel("6"));
+		add(new MyLabel("7"));
+		add(new MyLabel("8"));
+		add(new MyLabel("9"));
+		add(new MyLabel("10"));
+		add(new MyLabel("11"));
+	}
+}
+class MyFrame extends JFrame {
+	public MyFrame() {
+		setSize(600, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("3x4 Color Frame");
+		setVisible(true);
+		
+		JPanel panel = new MyPanel();
+		add(panel);
+	}
+}
+public class Problem2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyFrame f = new MyFrame();
+	}
+
+}

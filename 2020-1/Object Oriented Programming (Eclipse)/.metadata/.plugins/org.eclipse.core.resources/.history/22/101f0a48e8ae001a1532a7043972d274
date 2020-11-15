@@ -1,0 +1,66 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+class MyLabel extends JLabel {										//숫자를 담은 JLabel인 MyLabel을 정의한다.
+	private Random rand = new Random();								//랜덤한 색으로 채우기 위한 랜덤 객체 rand
+	Color c = Color.WHITE;											//초기 바탕색은 Color.WHITE
+	
+	public MyLabel(String s) {
+		setText(s);													//입력받은 문자열을 텍스트로 하는 레이블을 생성한다.
+		setOpaque(true);											//Label의 배경색을 투명하지 않도록 한다.
+		setBackground(c);											//배경색을 c로 설정한다.
+		addMouseListener(new MyMouseAdaptor());						//Mouse 리스너를 추가한다.
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		setBackground(c);											//배경색을 c로 설정한다.
+	}
+	
+	class MyMouseAdaptor extends MouseAdapter {						//mouseClicked만 사용하기에 adaptor를 사용한다.
+		public void mouseClicked(MouseEvent e) {					//마우스가 클릭 될 때마다 이벤트가 생성된다.
+			c = new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255));		//랜덤한 색을 c에 배정한다.
+			repaint();												//Label을 다시 색칠한다.
+		}
+	}
+}
+
+class MyPanel extends JPanel {
+	public MyPanel() {
+		setLayout(new GridLayout(4,3));
+				
+		add(new MyLabel("0"));
+		add(new MyLabel("1"));
+		add(new MyLabel("2"));
+		add(new MyLabel("3"));
+		add(new MyLabel("4"));
+		add(new MyLabel("5"));
+		add(new MyLabel("6"));
+		add(new MyLabel("7"));
+		add(new MyLabel("8"));
+		add(new MyLabel("9"));
+		add(new MyLabel("10"));
+		add(new MyLabel("11"));
+	}
+}
+class MyFrame extends JFrame {
+	public MyFrame() {
+		setSize(600, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("3x4 Color Frame");
+		setVisible(true);
+		
+		JPanel panel = new MyPanel();
+		add(panel);
+	}
+}
+public class Problem2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyFrame f = new MyFrame();
+	}
+
+}

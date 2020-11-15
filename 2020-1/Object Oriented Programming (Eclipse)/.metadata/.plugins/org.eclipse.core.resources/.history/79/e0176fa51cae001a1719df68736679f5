@@ -1,0 +1,13 @@
+import javax.swing.*;
+
+public class Problem2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame f = new JFrame("3x4 Color Frame");
+		f.setSize(600, 800);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setVisible(true);
+	}
+
+}

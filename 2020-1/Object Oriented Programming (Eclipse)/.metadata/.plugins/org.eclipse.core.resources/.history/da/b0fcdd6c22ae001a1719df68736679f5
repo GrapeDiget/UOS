@@ -1,0 +1,34 @@
+import javax.swing.*;
+import java.awt.*;
+
+class MyFrame extends JFrame {
+	public MyFrame() {
+		setSize(600, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("3x4 Color Frame");
+		setVisible(true);
+		
+		setLayout(new GridLayout(4,3));
+		
+		add(new JLabel("0"));
+		add(new JLabel("1"));
+		add(new JLabel("2"));
+		add(new JLabel("3"));
+		add(new JLabel("4"));
+		add(new JLabel("5"));
+		add(new JLabel("6"));
+		add(new JLabel("7"));
+		add(new JLabel("8"));
+		add(new JLabel("9"));
+		add(new JLabel("10"));
+		add(new JLabel("11"));
+	}
+}
+public class Problem2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyFrame f = new MyFrame();
+	}
+
+}

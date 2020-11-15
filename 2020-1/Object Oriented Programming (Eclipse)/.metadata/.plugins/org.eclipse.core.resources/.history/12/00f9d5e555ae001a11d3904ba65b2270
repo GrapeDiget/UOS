@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class MyMath<T> {
+	private ArrayList<T> list = new ArrayList<T>();
+	
+	public void add (T item) {
+		list.add(item);
+	}
+	
+	public double getAverage() {
+		Iterator e = list.iterator();
+		double sum = 0.0;
+		
+		while(e.hasNext()) {
+			sum += (double)e.next();
+		}
+		
+		return sum/list.size();
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyMath<Integer> integerList = new MyMath<Integer>();				//짝수를 저장하는 Integer 타입의 ArrayList객체 integerList 
+		MyMath<Double> doubleList = new MyMath<Double>();				//Double 타입의 ArrayList객체 doubleList
+		
+		for(int i=1; i<=10; i++) {
+			integerList.add(i*2);								//integerList에 2부터 20까지의 짝수를 저장한다.
+		}
+		for(int i=1; i<=10; i++) {
+			doubleList.add(i*0.1);								//integerList에 2부터 20까지의 짝수를 저장한다.
+		}
+		
+		System.out.println(integerList.getAverage());			//integerList에서 
+		System.out.println(doubleList.getAverage());			//
+		
+	}
+
+}

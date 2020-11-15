@@ -1,0 +1,78 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class MyPanel2 extends JPanel {
+	int x = 0;
+	int y = 0;
+	Color c;
+	
+	public MyPanel2() {
+		JLabel label = new JLabel("No Mouse Event");
+		add(label);
+		
+		addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				x = e.getX();
+				y = e.getY();
+				label.setText("MousePressed (" + x + "," + y + ")");
+			}
+	
+			public void mouseReleased(MouseEvent e) {
+				x = e.getX();
+				y = e.getY();
+				label.setText("MouseReleased (" + x + "," + y + ")");
+			}
+	
+			public void mouseEntered(MouseEvent e) {
+				c=Color.cyan;
+				repaint();
+			}
+	
+			public void mouseExited(MouseEvent e) {
+				c=Color.yellow;
+				repaint();
+			}
+		});
+		addMouseMotionListener(new MouseMotionListener() {
+			public void mouseDragged(MouseEvent e) {
+				x = e.getX();
+				y = e.getY();
+				label.setText("MouseDragged (" + x + "," + y + ")");
+			}
+	
+			public void mouseMoved(MouseEvent e) {
+				x = e.getX();
+				y = e.getY();
+				label.setText("MouseMoved (" + x + "," + y + ")");
+			}
+		});
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		setBackground(c);											//배경색을 c로 설정한다.
+	}
+
+	
+}
+
+class MyFrame2 extends JFrame {
+	public MyFrame2() {
+		setSize(600, 300);											//프레임의 크기를 지정한다.
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);				//프레임의 close 버튼을 누르면 프로그램을 종료한다.
+		setTitle("MouseListener와 MouseMotionListener 예제");								//프레임의 제목을 설정한다.
+		setVisible(true);											//프레임을 화면에 나타나게 한다.
+		
+		add(new MyPanel2());										//MyPanel을 프레임에 부착한다.
+	}
+}
+
+public class Problem3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyFrame2 f = new MyFrame2();
+	}
+
+}

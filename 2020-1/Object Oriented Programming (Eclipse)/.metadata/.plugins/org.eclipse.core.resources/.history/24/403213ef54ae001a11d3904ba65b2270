@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class MyMath<T> {
+	private ArrayList<T> list = new ArrayList<T>();
+	
+	public void add (T item) {
+		list.add(item);
+	}
+	
+	public double getAverage() {
+		Iterator e = list.iterator();
+		Double sum = 0.0;
+		
+		while(e.hasNext()) {
+			sum += (Double)e.next();
+		}
+		
+		return sum/list.size();
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

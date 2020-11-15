@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+class Person {
+	protected String name;
+	protected String age;
+	protected String address;
+}
+
+class Student extends Person {
+	private String school;
+	private String major;
+	private String classNumber;
+	
+	private double[] point = new double[8];
+	
+	public Student(String name, String age, String address, String school, String major, String classNumber) {
+		super.name = name;
+		super.age = age;
+		super.address = address;
+		this.school = school;
+		this.major = major;
+		this.classNumber = classNumber;
+	}
+	
+	public double average() {
+		double sum = 0;
+		for(int i=0; i<5; i++) {
+			sum += getPoint()[i];
+		}
+		return sum/8;
+	}
+	
+	public double maxGrade() {
+		double max=0;
+		for(int i=0; i<8; i++) {
+			if(max < getPoint()[i]) {
+				max = getPoint()[i];
+			}
+		}
+		return max;	
+	}
+	
+	public double minGrade() {
+		double min=10;
+		for(int i=0; i<8; i++) {
+			if(min > getPoint()[i]) {
+				min = getPoint()[i];
+			}
+		}
+		return min;
+	}
+	
+	public String toString() {
+		return String.format(super.name + " (소속: " + this.school + " " + this.major + ", 학번: " + this.classNumber + ")");
+	}
+
+	public double[] getPoint() {
+		return point;
+	}
+
+	public void setPoint(double[] point) {
+		this.point = point;
+	}
+}
+
+
+
+
+public class Problem1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("이름: ");
+		String name = input.nextLine();
+		System.out.print("나이: ");
+		String age = input.nextLine();
+		System.out.print("주소: ");
+		String address = input.nextLine();
+		System.out.print("학교: ");
+		String school = input.nextLine();
+		System.out.print("학과: ");
+		String major = input.nextLine();
+		System.out.print("학번: ");
+		String classNumber = input.nextLine();
+		
+		Student s1 = new Student(name, age, address, school, major, classNumber);
+		
+		System.out.println("-------------------------");
+		
+		System.out.println("8학기 학점을 순서대로 입력하세요");
+		for(int i=1; i<=8; i++) {
+			System.out.print(i + "학기 학점 → ");
+			s1.getPoint()[i-1] = input.nextDouble();
+		}
+		
+		System.out.println("-------------------------");
+		
+		System.out.println(s1);
+		System.out.println("학생의 8학기 동안 최고 학점은 " + s1.maxGrade() + ", 최저 학점은 " + s1.minGrade() + "임");
+		System.out.println("총 평균 평점은 " + s1.average() + "점 입니다.");
+
+	}
+
+}
