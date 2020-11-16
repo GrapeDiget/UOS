@@ -1,0 +1,64 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc sipo4.ucf -p xc3s200-pq208-4 sipo4.ngc
+sipo4.ngd
+
+Reading NGO file "C:/Users/vmfos/OneDrive/my_xilinx/sipo4/sipo4.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "sipo4.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<net q[3] loc = p191;> [sipo4.ucf(2)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<net q[2] loc = p196;> [sipo4.ucf(3)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<net q[1] loc = p198;> [sipo4.ucf(4)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<net q[0] loc = p200;> [sipo4.ucf(5)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:NgdBuild:1012 - The constraint <net q[3] loc = p191;> [sipo4.ucf(2)] is
+   overridden on the design object q<3> by the constraint <NET "q<3>" LOC =
+   P191;> [sipo4.ucf(15)].
+WARNING:NgdBuild:1012 - The constraint <net q[2] loc = p196;> [sipo4.ucf(3)] is
+   overridden on the design object q<2> by the constraint <NET "q<2>" LOC =
+   P196;> [sipo4.ucf(14)].
+WARNING:NgdBuild:1012 - The constraint <net q[1] loc = p198;> [sipo4.ucf(4)] is
+   overridden on the design object q<1> by the constraint <NET "q<1>" LOC =
+   P198;> [sipo4.ucf(13)].
+WARNING:NgdBuild:1012 - The constraint <net q[0] loc = p200;> [sipo4.ucf(5)] is
+   overridden on the design object q<0> by the constraint <NET "q<0>" LOC =
+   P200;> [sipo4.ucf(12)].
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   8
+
+Total memory usage is 4396944 kilobytes
+
+Writing NGD file "sipo4.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+Writing NGDBUILD log file "sipo4.bld"...

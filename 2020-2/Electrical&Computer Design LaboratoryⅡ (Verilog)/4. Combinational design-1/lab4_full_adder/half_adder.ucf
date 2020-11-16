@@ -1,0 +1,4 @@
+net a loc = p63;
+net b loc = p67;
+net c loc = p191;
+net s loc = p196;

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab4_full_adder2/half_adder.xst" -ofn "E:/OneDrive/my_xilinx/lab4_full_adder2/half_adder.syr" 

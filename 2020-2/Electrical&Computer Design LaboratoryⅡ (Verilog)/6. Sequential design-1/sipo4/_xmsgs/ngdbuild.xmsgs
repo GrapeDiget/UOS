@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;net q[3] loc = p191;&gt; [sipo4.ucf(2)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;net q[2] loc = p196;&gt; [sipo4.ucf(3)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;net q[1] loc = p198;&gt; [sipo4.ucf(4)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;net q[0] loc = p200;&gt; [sipo4.ucf(5)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;net q[3] loc = p191;&gt; [sipo4.ucf(2)]</arg> is overridden on the design object <arg fmt="%s" index="2">q&lt;3&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;q&lt;3&gt;&quot; LOC = P191;&gt; [sipo4.ucf(15)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;net q[2] loc = p196;&gt; [sipo4.ucf(3)]</arg> is overridden on the design object <arg fmt="%s" index="2">q&lt;2&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;q&lt;2&gt;&quot; LOC = P196;&gt; [sipo4.ucf(14)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;net q[1] loc = p198;&gt; [sipo4.ucf(4)]</arg> is overridden on the design object <arg fmt="%s" index="2">q&lt;1&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;q&lt;1&gt;&quot; LOC = P198;&gt; [sipo4.ucf(13)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;net q[0] loc = p200;&gt; [sipo4.ucf(5)]</arg> is overridden on the design object <arg fmt="%s" index="2">q&lt;0&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;q&lt;0&gt;&quot; LOC = P200;&gt; [sipo4.ucf(12)]</arg>.
+</msg>
+
+</messages>
+

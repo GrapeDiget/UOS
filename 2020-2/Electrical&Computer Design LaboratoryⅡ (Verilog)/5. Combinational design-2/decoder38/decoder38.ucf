@@ -1,0 +1,11 @@
+net a loc = p65;
+net b loc = p67;
+net c loc = p63;
+net out[0] loc = p15;
+net out[1] loc = p12;
+net out[2] loc = p10;
+net out[3] loc = p204;
+net out[4] loc = p200;
+net out[5] loc = p198;
+net out[6] loc = p196;
+net out[7] loc = p191;

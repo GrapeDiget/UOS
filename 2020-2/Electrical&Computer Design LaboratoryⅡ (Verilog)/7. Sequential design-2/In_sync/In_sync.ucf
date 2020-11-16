@@ -1,0 +1,3 @@
+net in loc = p63;
+net clk loc = p76;
+net in_sync loc = p191;

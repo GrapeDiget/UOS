@@ -1,0 +1,8 @@
+net a loc = p63;
+net b loc = p67;
+net clk loc = p76;
+net resetn loc = p57;
+net out loc = p191;
+net state[2] loc = p190;
+net state[1] loc = p194;
+net state[0] loc = p197;

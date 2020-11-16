@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_03/lab_03.xst" -ofn "E:/OneDrive/my_xilinx/lab_03/lab_03.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_03/lab_03.xst" -ofn "E:/OneDrive/my_xilinx/lab_03/lab_03.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_03/lab_03.xst" -ofn "E:/OneDrive/my_xilinx/lab_03/lab_03.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab_03.ucf -p xc3s200-pq208-4 lab_03.ngc lab_03.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o lab_03_map.ncd lab_03.ngd lab_03.pcf 
+par -w -intstyle ise -ol high -t 1 lab_03_map.ncd lab_03.ncd lab_03.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab_03.twx lab_03.ncd -o lab_03.twr lab_03.pcf -ucf lab_03.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab_03.ucf -p xc3s200-pq208-4 lab_03.ngc lab_03.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o lab_03_map.ncd lab_03.ngd lab_03.pcf 
+par -w -intstyle ise -ol high -t 1 lab_03_map.ncd lab_03.ncd lab_03.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab_03.twx lab_03.ncd -o lab_03.twr lab_03.pcf -ucf lab_03.ucf 
+bitgen -intstyle ise -f lab_03.ut lab_03.ncd 

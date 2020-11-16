@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/In_sync/In_sync.xst" -ofn "E:/OneDrive/my_xilinx/In_sync/In_sync.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/In_sync/In_sync.xst" -ofn "E:/OneDrive/my_xilinx/In_sync/In_sync.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc In_sync.ucf -p xc3s200-pq208-4 In_sync.ngc In_sync.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o In_sync_map.ncd In_sync.ngd In_sync.pcf 
+par -w -intstyle ise -ol high -t 1 In_sync_map.ncd In_sync.ncd In_sync.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml In_sync.twx In_sync.ncd -o In_sync.twr In_sync.pcf -ucf In_sync.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc In_sync.ucf -p xc3s200-pq208-4 In_sync.ngc In_sync.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o In_sync_map.ncd In_sync.ngd In_sync.pcf 
+par -w -intstyle ise -ol high -t 1 In_sync_map.ncd In_sync.ncd In_sync.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml In_sync.twx In_sync.ncd -o In_sync.twr In_sync.pcf -ucf In_sync.ucf 
+bitgen -intstyle ise -f In_sync.ut In_sync.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/In_sync/In_sync.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/In_sync/In_sync.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc In_sync.ucf -p xc3s200-pq208-4 In_sync.ngc In_sync.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o In_sync_map.ncd In_sync.ngd In_sync.pcf 
+par -w -intstyle ise -ol high -t 1 In_sync_map.ncd In_sync.ncd In_sync.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml In_sync.twx In_sync.ncd -o In_sync.twr In_sync.pcf -ucf In_sync.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc In_sync.ucf -p xc3s200-pq208-4 In_sync.ngc In_sync.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o In_sync_map.ncd In_sync.ngd In_sync.pcf 
+par -w -intstyle ise -ol high -t 1 In_sync_map.ncd In_sync.ncd In_sync.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml In_sync.twx In_sync.ncd -o In_sync.twr In_sync.pcf -ucf In_sync.ucf 
+bitgen -intstyle ise -f In_sync.ut In_sync.ncd 

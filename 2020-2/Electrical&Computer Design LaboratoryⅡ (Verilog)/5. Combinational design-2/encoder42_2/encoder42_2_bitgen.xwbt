@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\OneDrive\my_xilinx\encoder42_2\encoder42_2.ncd
+OUTFILE=E:\OneDrive\my_xilinx\encoder42_2\encoder42_2.bit
+FAMILY=Spartan3
+PART=xc3s200-4pq208
+WORKINGDIR=E:\OneDrive\my_xilinx\encoder42_2
+LICENSE=WebPack
+USER_INFO=212027314_0_0_253

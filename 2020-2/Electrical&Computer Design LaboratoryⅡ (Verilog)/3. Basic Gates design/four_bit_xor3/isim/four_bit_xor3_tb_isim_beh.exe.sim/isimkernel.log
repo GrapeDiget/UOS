@@ -1,0 +1,29 @@
+Command line:
+   four_bit_xor3_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3052
+
+Sun Sep 20 02:35:54 2020
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5153.98 Meg
+
+ Total Signals          : 16
+ Total Nets             : 25
+ Total Signal Drivers   : 8
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 11
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 149
+Total Line Count : 24
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 5468.55 Meg
+
+Sun Sep 20 02:36:25 2020
+

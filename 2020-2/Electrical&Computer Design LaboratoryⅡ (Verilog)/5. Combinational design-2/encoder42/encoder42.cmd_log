@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/encoder42/encoder42.xst" -ofn "E:/OneDrive/my_xilinx/encoder42/encoder42.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/encoder42/encoder42.xst" -ofn "E:/OneDrive/my_xilinx/encoder42/encoder42.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc encoder42.ucf -p xc3s200-pq208-4 encoder42.ngc encoder42.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o encoder42_map.ncd encoder42.ngd encoder42.pcf 
+par -w -intstyle ise -ol high -t 1 encoder42_map.ncd encoder42.ncd encoder42.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml encoder42.twx encoder42.ncd -o encoder42.twr encoder42.pcf -ucf encoder42.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc encoder42.ucf -p xc3s200-pq208-4 encoder42.ngc encoder42.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o encoder42_map.ncd encoder42.ngd encoder42.pcf 
+par -w -intstyle ise -ol high -t 1 encoder42_map.ncd encoder42.ncd encoder42.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml encoder42.twx encoder42.ncd -o encoder42.twr encoder42.pcf -ucf encoder42.ucf 
+bitgen -intstyle ise -f encoder42.ut encoder42.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/encoder42/encoder42.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/encoder42/encoder42.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc encoder42.ucf -p xc3s200-pq208-4 encoder42.ngc encoder42.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o encoder42_map.ncd encoder42.ngd encoder42.pcf 
+par -w -intstyle ise -ol high -t 1 encoder42_map.ncd encoder42.ncd encoder42.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml encoder42.twx encoder42.ncd -o encoder42.twr encoder42.pcf -ucf encoder42.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc encoder42.ucf -p xc3s200-pq208-4 encoder42.ngc encoder42.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o encoder42_map.ncd encoder42.ngd encoder42.pcf 
+par -w -intstyle ise -ol high -t 1 encoder42_map.ncd encoder42.ncd encoder42.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml encoder42.twx encoder42.ncd -o encoder42.twr encoder42.pcf -ucf encoder42.ucf 
+bitgen -intstyle ise -f encoder42.ut encoder42.ncd 

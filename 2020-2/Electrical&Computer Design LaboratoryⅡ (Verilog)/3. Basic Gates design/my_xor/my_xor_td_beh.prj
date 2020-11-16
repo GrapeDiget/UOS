@@ -1,0 +1,3 @@
+verilog work "my_xor.v"
+verilog work "my_xor_td.v"
+verilog work "D:/Xilinx_directory/14.7/ISE_DS/ISE//verilog/src/glbl.v"

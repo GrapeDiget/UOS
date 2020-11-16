@@ -1,0 +1,3 @@
+verilog work "my_and4.v"
+verilog work "my_and4_tb.v"
+verilog work "D:/Xilinx_directory/14.7/ISE_DS/ISE//verilog/src/glbl.v"

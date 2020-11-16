@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Parallel_data_transfer1/Parallel_data_transfer1.xst" -ofn "E:/OneDrive/my_xilinx/Parallel_data_transfer1/Parallel_data_transfer1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 Parallel_data_transfer1.ngc Parallel_data_transfer1.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ngd Parallel_data_transfer1.pcf 
+par -w -intstyle ise -ol high -t 1 Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ncd Parallel_data_transfer1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Parallel_data_transfer1.twx Parallel_data_transfer1.ncd -o Parallel_data_transfer1.twr Parallel_data_transfer1.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Parallel_data_transfer1.ucf -p xc3s200-pq208-4 Parallel_data_transfer1.ngc Parallel_data_transfer1.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ngd Parallel_data_transfer1.pcf 
+par -w -intstyle ise -ol high -t 1 Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ncd Parallel_data_transfer1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Parallel_data_transfer1.twx Parallel_data_transfer1.ncd -o Parallel_data_transfer1.twr Parallel_data_transfer1.pcf -ucf Parallel_data_transfer1.ucf 
+bitgen -intstyle ise -f Parallel_data_transfer1.ut Parallel_data_transfer1.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/Parallel_data_transfer1/Parallel_data_transfer1.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/Parallel_data_transfer1/Parallel_data_transfer1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Parallel_data_transfer1.ucf -p xc3s200-pq208-4 Parallel_data_transfer1.ngc Parallel_data_transfer1.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ngd Parallel_data_transfer1.pcf 
+par -w -intstyle ise -ol high -t 1 Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ncd Parallel_data_transfer1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Parallel_data_transfer1.twx Parallel_data_transfer1.ncd -o Parallel_data_transfer1.twr Parallel_data_transfer1.pcf -ucf Parallel_data_transfer1.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Parallel_data_transfer1.ucf -p xc3s200-pq208-4 Parallel_data_transfer1.ngc Parallel_data_transfer1.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ngd Parallel_data_transfer1.pcf 
+par -w -intstyle ise -ol high -t 1 Parallel_data_transfer1_map.ncd Parallel_data_transfer1.ncd Parallel_data_transfer1.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Parallel_data_transfer1.twx Parallel_data_transfer1.ncd -o Parallel_data_transfer1.twr Parallel_data_transfer1.pcf -ucf Parallel_data_transfer1.ucf 
+bitgen -intstyle ise -f Parallel_data_transfer1.ut Parallel_data_transfer1.ncd 

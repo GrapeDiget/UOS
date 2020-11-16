@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_05/fnd_array.xst" -ofn "E:/OneDrive/my_xilinx/lab_05/fnd_array.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_05/fnd_array.xst" -ofn "E:/OneDrive/my_xilinx/lab_05/fnd_array.syr" 

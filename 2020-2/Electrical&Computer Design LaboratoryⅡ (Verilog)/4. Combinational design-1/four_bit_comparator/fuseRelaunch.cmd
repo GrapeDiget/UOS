@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/OneDrive/my_xilinx/four_bit_comparator/four_bit_comparator_tb_isim_beh.exe" -prj "E:/OneDrive/my_xilinx/four_bit_comparator/four_bit_comparator_tb_beh.prj" "work.four_bit_comparator_tb" "work.glbl" 

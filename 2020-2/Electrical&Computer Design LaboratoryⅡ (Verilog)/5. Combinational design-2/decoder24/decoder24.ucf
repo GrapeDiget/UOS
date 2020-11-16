@@ -1,0 +1,6 @@
+net a[0] loc = p67;
+net a[1] loc = p63;
+net y[0] loc = p200;
+net y[1] loc = p198;
+net y[2] loc = p196;
+net y[3] loc = p191;

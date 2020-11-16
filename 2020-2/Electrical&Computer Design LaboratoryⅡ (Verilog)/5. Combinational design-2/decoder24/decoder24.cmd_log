@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/decoder24/decoder24.xst" -ofn "E:/OneDrive/my_xilinx/decoder24/decoder24.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/decoder24/decoder24.xst" -ofn "E:/OneDrive/my_xilinx/decoder24/decoder24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc decoder24.ucf -p xc3s200-pq208-4 decoder24.ngc decoder24.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o decoder24_map.ncd decoder24.ngd decoder24.pcf 
+par -w -intstyle ise -ol high -t 1 decoder24_map.ncd decoder24.ncd decoder24.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decoder24.twx decoder24.ncd -o decoder24.twr decoder24.pcf -ucf decoder24.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc decoder24.ucf -p xc3s200-pq208-4 decoder24.ngc decoder24.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o decoder24_map.ncd decoder24.ngd decoder24.pcf 
+par -w -intstyle ise -ol high -t 1 decoder24_map.ncd decoder24.ncd decoder24.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decoder24.twx decoder24.ncd -o decoder24.twr decoder24.pcf -ucf decoder24.ucf 
+bitgen -intstyle ise -f decoder24.ut decoder24.ncd 

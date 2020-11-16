@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 13 13:08:35 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "y<0>" LOCATE = SITE "P191" LEVEL 1;
+COMP "y<1>" LOCATE = SITE "P196" LEVEL 1;
+COMP "a<0>" LOCATE = SITE "P71" LEVEL 1;
+COMP "a<1>" LOCATE = SITE "P65" LEVEL 1;
+COMP "a<2>" LOCATE = SITE "P67" LEVEL 1;
+COMP "a<3>" LOCATE = SITE "P63" LEVEL 1;
+SCHEMATIC END;
+

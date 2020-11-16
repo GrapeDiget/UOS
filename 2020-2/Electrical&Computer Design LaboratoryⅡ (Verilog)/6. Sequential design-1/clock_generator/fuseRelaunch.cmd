@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/OneDrive/my_xilinx/clock_generator/clock_generator_tb_isim_beh.exe" -prj "E:/OneDrive/my_xilinx/clock_generator/clock_generator_tb_beh.prj" "work.clock_generator_tb" "work.glbl" 

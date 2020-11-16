@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\OneDrive\my_xilinx\lab_05\lab_05.ncd
+OUTFILE=E:\OneDrive\my_xilinx\lab_05\lab_05.bit
+FAMILY=Spartan3
+PART=xc3s200-4pq208
+WORKINGDIR=E:\OneDrive\my_xilinx\lab_05
+LICENSE=WebPack
+USER_INFO=212027314_0_0_253

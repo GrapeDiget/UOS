@@ -1,0 +1,15 @@
+net a[3] loc = p191;
+net a[2] loc = p196;
+net a[1] loc = p198;
+net a[0] loc = p200;
+net b[3] loc = p190;
+net b[2] loc = p194;
+net b[1] loc = p197;
+net b[0] loc = p199;
+net data_in[3] loc = p34;
+net data_in[2] loc = p35;
+net data_in[1] loc = p37;
+net data_in[0] loc = p36;
+net clk loc = p63;
+
+net clk CLOCK_DEDICATED_ROUTE = false;

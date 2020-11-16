@@ -1,0 +1,29 @@
+Command line:
+   Parallel_data_transfer2_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  14280
+
+Sat Oct 24 03:41:02 2020
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5153.36 Meg
+
+ Total Signals          : 17
+ Total Nets             : 26
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 119
+Total Line Count : 30
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 5153.36 Meg
+
+Sat Oct 24 03:41:28 2020
+

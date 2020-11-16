@@ -1,0 +1,9 @@
+net a loc = p176;
+net b loc = p178;
+net c loc = p181;
+net d loc = p182;
+net e loc = p184;
+net f loc = p185;
+net g loc = p187;
+net clk loc = p183;
+net resetn loc = p57;

@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/four_bit_comparator/four_bit_comparator.xst" -ofn "E:/OneDrive/my_xilinx/four_bit_comparator/four_bit_comparator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_comparator.ucf -p xc3s200-pq208-4 four_bit_comparator.ngc four_bit_comparator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_comparator_map.ncd four_bit_comparator.ngd four_bit_comparator.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_comparator_map.ncd four_bit_comparator.ncd four_bit_comparator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_comparator.twx four_bit_comparator.ncd -o four_bit_comparator.twr four_bit_comparator.pcf -ucf four_bit_comparator.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_comparator.ucf -p xc3s200-pq208-4 four_bit_comparator.ngc four_bit_comparator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_comparator_map.ncd four_bit_comparator.ngd four_bit_comparator.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_comparator_map.ncd four_bit_comparator.ncd four_bit_comparator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_comparator.twx four_bit_comparator.ncd -o four_bit_comparator.twr four_bit_comparator.pcf -ucf four_bit_comparator.ucf 
+bitgen -intstyle ise -f four_bit_comparator.ut four_bit_comparator.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/four_bit_comparator/four_bit_comparator.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/four_bit_comparator/four_bit_comparator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_comparator.ucf -p xc3s200-pq208-4 four_bit_comparator.ngc four_bit_comparator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_comparator_map.ncd four_bit_comparator.ngd four_bit_comparator.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_comparator_map.ncd four_bit_comparator.ncd four_bit_comparator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_comparator.twx four_bit_comparator.ncd -o four_bit_comparator.twr four_bit_comparator.pcf -ucf four_bit_comparator.ucf 
+bitgen -intstyle ise -f four_bit_comparator.ut four_bit_comparator.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_comparator.ucf -p xc3s200-pq208-4 four_bit_comparator.ngc four_bit_comparator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_comparator_map.ncd four_bit_comparator.ngd four_bit_comparator.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_comparator_map.ncd four_bit_comparator.ncd four_bit_comparator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_comparator.twx four_bit_comparator.ncd -o four_bit_comparator.twr four_bit_comparator.pcf -ucf four_bit_comparator.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_comparator.ucf -p xc3s200-pq208-4 four_bit_comparator.ngc four_bit_comparator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_comparator_map.ncd four_bit_comparator.ngd four_bit_comparator.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_comparator_map.ncd four_bit_comparator.ncd four_bit_comparator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_comparator.twx four_bit_comparator.ncd -o four_bit_comparator.twr four_bit_comparator.pcf -ucf four_bit_comparator.ucf 
+bitgen -intstyle ise -f four_bit_comparator.ut four_bit_comparator.ncd 

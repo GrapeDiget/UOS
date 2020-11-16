@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/encoder42_2/encoder42_2.xst" -ofn "E:/OneDrive/my_xilinx/encoder42_2/encoder42_2.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/encoder42_2/encoder42_2.xst" -ofn "E:/OneDrive/my_xilinx/encoder42_2/encoder42_2.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/encoder42_2/encoder42_2.xst" -ofn "E:/OneDrive/my_xilinx/encoder42_2/encoder42_2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 encoder42_2.ngc encoder42_2.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o encoder42_2_map.ncd encoder42_2.ngd encoder42_2.pcf 
+par -w -intstyle ise -ol high -t 1 encoder42_2_map.ncd encoder42_2.ncd encoder42_2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml encoder42_2.twx encoder42_2.ncd -o encoder42_2.twr encoder42_2.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc encoder42_2.ucf -p xc3s200-pq208-4 encoder42_2.ngc encoder42_2.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o encoder42_2_map.ncd encoder42_2.ngd encoder42_2.pcf 
+par -w -intstyle ise -ol high -t 1 encoder42_2_map.ncd encoder42_2.ncd encoder42_2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml encoder42_2.twx encoder42_2.ncd -o encoder42_2.twr encoder42_2.pcf -ucf encoder42_2.ucf 
+bitgen -intstyle ise -f encoder42_2.ut encoder42_2.ncd 

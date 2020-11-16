@@ -1,0 +1,385 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: application2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "application2.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "application2"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-pq208
+
+---- Source Options
+Top Module Name                    : application2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "In_sync.v" in library work
+Compiling verilog file "application2.v" in library work
+Module <In_sync> compiled
+Module <application2> compiled
+No errors in compilation
+Analysis of file <"application2.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <application2> in library <work> with parameters.
+	STATE_0 = "000"
+	STATE_1 = "001"
+	STATE_2 = "010"
+	STATE_3 = "011"
+	STATE_4 = "100"
+
+Analyzing hierarchy for module <In_sync> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <application2>.
+	STATE_0 = 3'b000
+	STATE_1 = 3'b001
+	STATE_2 = 3'b010
+	STATE_3 = 3'b011
+	STATE_4 = 3'b100
+Module <application2> is correct for synthesis.
+ 
+Analyzing module <In_sync> in library <work>.
+Module <In_sync> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <In_sync>.
+    Related source file is "In_sync.v".
+    Found 1-bit register for signal <in_sync>.
+    Found 1-bit register for signal <cnt>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <In_sync> synthesized.
+
+
+Synthesizing Unit <application2>.
+    Related source file is "application2.v".
+    Found 3-bit register for signal <state>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <application2> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ 1-bit register                                        : 4
+ 3-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <application2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block application2, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : application2.ngr
+Top Level Output File Name         : application2
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 16
+#      INV                         : 5
+#      LUT3                        : 1
+#      LUT4                        : 6
+#      MUXF5                       : 3
+#      VCC                         : 1
+# FlipFlops/Latches                : 7
+#      FDC                         : 3
+#      FDR_1                       : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 3
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-4 
+
+ Number of Slices:                        5  out of   1920     0%  
+ Number of Slice Flip Flops:              7  out of   3840     0%  
+ Number of 4 input LUTs:                 12  out of   3840     0%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    141     5%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 7     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+resetn_inv(resetn_inv1_INV_0:O)    | NONE(state_0)          | 3     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.188ns (Maximum Frequency: 161.603MHz)
+   Minimum input arrival time before clock: 4.076ns
+   Maximum output required time after clock: 9.138ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.188ns (frequency: 161.603MHz)
+  Total number of paths / destination ports: 29 / 5
+-------------------------------------------------------------------------
+Delay:               3.094ns (Levels of Logic = 2)
+  Source:            U1/in_sync (FF)
+  Destination:       state_0 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk rising
+
+  Data Path: U1/in_sync to state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q            5   0.720   1.260  U1/in_sync (U1/in_sync)
+     LUT4:I0->O            1   0.551   0.000  next_state<0>_F (N22)
+     MUXF5:I0->O           1   0.360   0.000  next_state<0> (next_state<0>)
+     FDC:D                     0.203          state_0
+    ----------------------------------------
+    Total                      3.094ns (1.834ns logic, 1.260ns route)
+                                       (59.3% logic, 40.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.076ns (Levels of Logic = 2)
+  Source:            b (PAD)
+  Destination:       U1/cnt (FF)
+  Destination Clock: clk falling
+
+  Data Path: b to U1/cnt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  b_IBUF (b_IBUF)
+     INV:I->O              2   0.551   0.877  U1/in_inv1_INV_0 (U1/in_inv)
+     FDR_1:R                   1.026          U1/in_sync
+    ----------------------------------------
+    Total                      4.076ns (2.398ns logic, 1.678ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Offset:              9.138ns (Levels of Logic = 2)
+  Source:            state_1 (FF)
+  Destination:       out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: state_1 to out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.720   1.422  state_1 (state_1)
+     LUT3:I0->O            1   0.551   0.801  next_state<2>11 (out_OBUF)
+     OBUF:I->O                 5.644          out_OBUF (out)
+    ----------------------------------------
+    Total                      9.138ns (6.915ns logic, 2.223ns route)
+                                       (75.7% logic, 24.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.90 secs
+ 
+--> 
+
+Total memory usage is 4497056 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

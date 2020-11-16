@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 27 13:35:02 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P63" LEVEL 1;
+PIN clk_pin<0> = BEL "clk" PINNAME PAD;
+PIN "clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "a<0>" LOCATE = SITE "P200" LEVEL 1;
+COMP "a<1>" LOCATE = SITE "P198" LEVEL 1;
+COMP "data_in<0>" LOCATE = SITE "P36" LEVEL 1;
+COMP "a<2>" LOCATE = SITE "P196" LEVEL 1;
+COMP "data_in<1>" LOCATE = SITE "P37" LEVEL 1;
+COMP "a<3>" LOCATE = SITE "P191" LEVEL 1;
+COMP "data_in<2>" LOCATE = SITE "P35" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "P199" LEVEL 1;
+COMP "data_in<3>" LOCATE = SITE "P34" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "P197" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "P194" LEVEL 1;
+COMP "b<3>" LOCATE = SITE "P190" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\vmfos\OneDrive\my_xilinx\sipo4_for\sipo4_for.ncd
+OUTFILE=C:\Users\vmfos\OneDrive\my_xilinx\sipo4_for\sipo4_for.bit
+FAMILY=Spartan3
+PART=xc3s200-4pq208
+WORKINGDIR=C:\Users\vmfos\OneDrive\my_xilinx\sipo4_for
+LICENSE=WebPack
+USER_INFO=212027314_0_0_253

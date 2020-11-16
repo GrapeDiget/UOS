@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/sipo4/sipo4.xst" -ofn "E:/OneDrive/my_xilinx/sipo4/sipo4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 sipo4.ngc sipo4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o sipo4_map.ncd sipo4.ngd sipo4.pcf 
+par -w -intstyle ise -ol high -t 1 sipo4_map.ncd sipo4.ncd sipo4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sipo4.twx sipo4.ncd -o sipo4.twr sipo4.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sipo4.ucf -p xc3s200-pq208-4 sipo4.ngc sipo4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o sipo4_map.ncd sipo4.ngd sipo4.pcf 
+par -w -intstyle ise -ol high -t 1 sipo4_map.ncd sipo4.ncd sipo4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sipo4.twx sipo4.ncd -o sipo4.twr sipo4.pcf -ucf sipo4.ucf 
+bitgen -intstyle ise -f sipo4.ut sipo4.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/sipo4/sipo4.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/sipo4/sipo4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sipo4.ucf -p xc3s200-pq208-4 sipo4.ngc sipo4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o sipo4_map.ncd sipo4.ngd sipo4.pcf 
+par -w -intstyle ise -ol high -t 1 sipo4_map.ncd sipo4.ncd sipo4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sipo4.twx sipo4.ncd -o sipo4.twr sipo4.pcf -ucf sipo4.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sipo4.ucf -p xc3s200-pq208-4 sipo4.ngc sipo4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o sipo4_map.ncd sipo4.ngd sipo4.pcf 
+par -w -intstyle ise -ol high -t 1 sipo4_map.ncd sipo4.ncd sipo4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sipo4.twx sipo4.ncd -o sipo4.twr sipo4.pcf -ucf sipo4.ucf 
+pin2ucf sipo4.ncd -o C:/Users/vmfos/OneDrive/my_xilinx/sipo4/sipo4.ucf -r sipo4.lck 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sipo4.ucf -p xc3s200-pq208-4 sipo4.ngc sipo4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o sipo4_map.ncd sipo4.ngd sipo4.pcf 
+par -w -intstyle ise -ol high -t 1 sipo4_map.ncd sipo4.ncd sipo4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml sipo4.twx sipo4.ncd -o sipo4.twr sipo4.pcf -ucf sipo4.ucf 
+bitgen -intstyle ise -f sipo4.ut sipo4.ncd 

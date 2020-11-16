@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\vmfos\OneDrive\my_xilinx\lab4_full_adder\impact.xsl
+OUTFILE=C:\Users\vmfos\OneDrive\my_xilinx\lab4_full_adder\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Users\vmfos\OneDrive\my_xilinx\lab4_full_adder
+LICENSE=iMPACT
+USER_INFO=iMPACT

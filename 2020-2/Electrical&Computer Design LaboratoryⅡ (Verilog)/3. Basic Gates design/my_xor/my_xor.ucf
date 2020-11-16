@@ -1,0 +1,3 @@
+net a loc = p63;
+net b loc = p67;
+net x loc = p191;

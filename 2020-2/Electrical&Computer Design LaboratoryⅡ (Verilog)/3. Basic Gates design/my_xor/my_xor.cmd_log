@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/my_xor/my_xor.xst" -ofn "E:/OneDrive/my_xilinx/my_xor/my_xor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 my_xor.ngc my_xor.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_xor_map.ncd my_xor.ngd my_xor.pcf 
+par -w -intstyle ise -ol high -t 1 my_xor_map.ncd my_xor.ncd my_xor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_xor.twx my_xor.ncd -o my_xor.twr my_xor.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 my_xor.ngc my_xor.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_xor_map.ncd my_xor.ngd my_xor.pcf 
+par -w -intstyle ise -ol high -t 1 my_xor_map.ncd my_xor.ncd my_xor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_xor.twx my_xor.ncd -o my_xor.twr my_xor.pcf 
+bitgen -intstyle ise -f my_xor.ut my_xor.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/my_xor/my_xor.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/my_xor/my_xor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_xor.ucf -p xc3s200-pq208-4 my_xor.ngc my_xor.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_xor_map.ncd my_xor.ngd my_xor.pcf 
+par -w -intstyle ise -ol high -t 1 my_xor_map.ncd my_xor.ncd my_xor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_xor.twx my_xor.ncd -o my_xor.twr my_xor.pcf -ucf my_xor.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_xor.ucf -p xc3s200-pq208-4 my_xor.ngc my_xor.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_xor_map.ncd my_xor.ngd my_xor.pcf 
+par -w -intstyle ise -ol high -t 1 my_xor_map.ncd my_xor.ncd my_xor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_xor.twx my_xor.ncd -o my_xor.twr my_xor.pcf -ucf my_xor.ucf 
+bitgen -intstyle ise -f my_xor.ut my_xor.ncd 

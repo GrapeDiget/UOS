@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/application/application.xst" -ofn "E:/OneDrive/my_xilinx/application/application.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/application/application.xst" -ofn "E:/OneDrive/my_xilinx/application/application.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc application.ucf -p xc3s200-pq208-4 application.ngc application.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o application_map.ncd application.ngd application.pcf 
+par -w -intstyle ise -ol high -t 1 application_map.ncd application.ncd application.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml application.twx application.ncd -o application.twr application.pcf -ucf application.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc application.ucf -p xc3s200-pq208-4 application.ngc application.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o application_map.ncd application.ngd application.pcf 
+par -w -intstyle ise -ol high -t 1 application_map.ncd application.ncd application.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml application.twx application.ncd -o application.twr application.pcf -ucf application.ucf 
+bitgen -intstyle ise -f application.ut application.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/application/application.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/application/application.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc application.ucf -p xc3s200-pq208-4 application.ngc application.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o application_map.ncd application.ngd application.pcf 
+par -w -intstyle ise -ol high -t 1 application_map.ncd application.ncd application.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml application.twx application.ncd -o application.twr application.pcf -ucf application.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc application.ucf -p xc3s200-pq208-4 application.ngc application.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o application_map.ncd application.ngd application.pcf 
+par -w -intstyle ise -ol high -t 1 application_map.ncd application.ncd application.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml application.twx application.ncd -o application.twr application.pcf -ucf application.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc application.ucf -p xc3s200-pq208-4 application.ngc application.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o application_map.ncd application.ngd application.pcf 
+par -w -intstyle ise -ol high -t 1 application_map.ncd application.ncd application.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml application.twx application.ncd -o application.twr application.pcf -ucf application.ucf 
+bitgen -intstyle ise -f application.ut application.ncd 

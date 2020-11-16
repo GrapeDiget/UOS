@@ -1,0 +1,4 @@
+verilog work "fnd_decoder.v"
+verilog work "fnd_array.v"
+verilog work "bin2bcd.v"
+verilog work "lab_06.v"

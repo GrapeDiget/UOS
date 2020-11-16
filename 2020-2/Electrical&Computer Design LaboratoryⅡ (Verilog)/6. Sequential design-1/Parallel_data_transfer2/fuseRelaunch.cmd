@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/OneDrive/my_xilinx/Parallel_data_transfer2/Parallel_data_transfer2_tb_isim_beh.exe" -prj "E:/OneDrive/my_xilinx/Parallel_data_transfer2/Parallel_data_transfer2_tb_beh.prj" "work.Parallel_data_transfer2_tb" "work.glbl" 

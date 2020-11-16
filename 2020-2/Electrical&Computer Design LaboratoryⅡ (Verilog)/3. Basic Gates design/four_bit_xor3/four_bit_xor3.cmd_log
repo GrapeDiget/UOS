@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/four_bit_xor3/four_bit_xor3.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/four_bit_xor3/four_bit_xor3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 four_bit_xor3.ngc four_bit_xor3.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_xor3_map.ncd four_bit_xor3.ngd four_bit_xor3.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_xor3_map.ncd four_bit_xor3.ncd four_bit_xor3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_xor3.twx four_bit_xor3.ncd -o four_bit_xor3.twr four_bit_xor3.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_xor3.ucf -p xc3s200-pq208-4 four_bit_xor3.ngc four_bit_xor3.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_xor3_map.ncd four_bit_xor3.ngd four_bit_xor3.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_xor3_map.ncd four_bit_xor3.ncd four_bit_xor3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_xor3.twx four_bit_xor3.ncd -o four_bit_xor3.twr four_bit_xor3.pcf -ucf four_bit_xor3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc four_bit_xor3.ucf -p xc3s200-pq208-4 four_bit_xor3.ngc four_bit_xor3.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o four_bit_xor3_map.ncd four_bit_xor3.ngd four_bit_xor3.pcf 
+par -w -intstyle ise -ol high -t 1 four_bit_xor3_map.ncd four_bit_xor3.ncd four_bit_xor3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml four_bit_xor3.twx four_bit_xor3.ncd -o four_bit_xor3.twr four_bit_xor3.pcf -ucf four_bit_xor3.ucf 
+bitgen -intstyle ise -f four_bit_xor3.ut four_bit_xor3.ncd 

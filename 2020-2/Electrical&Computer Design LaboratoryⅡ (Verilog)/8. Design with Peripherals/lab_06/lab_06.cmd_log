@@ -1,0 +1,26 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "E:/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab_06.ucf -p xc3s200-pq208-4 lab_06.ngc lab_06.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o lab_06_map.ncd lab_06.ngd lab_06.pcf 
+par -w -intstyle ise -ol high -t 1 lab_06_map.ncd lab_06.ncd lab_06.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab_06.twx lab_06.ncd -o lab_06.twr lab_06.pcf -ucf lab_06.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab_06.ucf -p xc3s200-pq208-4 lab_06.ngc lab_06.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o lab_06_map.ncd lab_06.ngd lab_06.pcf 
+par -w -intstyle ise -ol high -t 1 lab_06_map.ncd lab_06.ncd lab_06.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab_06.twx lab_06.ncd -o lab_06.twr lab_06.pcf -ucf lab_06.ucf 
+bitgen -intstyle ise -f lab_06.ut lab_06.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/lab_06/lab_06.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/lab_06/lab_06.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab_06.ucf -p xc3s200-pq208-4 lab_06.ngc lab_06.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o lab_06_map.ncd lab_06.ngd lab_06.pcf 
+par -w -intstyle ise -ol high -t 1 lab_06_map.ncd lab_06.ncd lab_06.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab_06.twx lab_06.ncd -o lab_06.twr lab_06.pcf -ucf lab_06.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab_06.ucf -p xc3s200-pq208-4 lab_06.ngc lab_06.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o lab_06_map.ncd lab_06.ngd lab_06.pcf 
+par -w -intstyle ise -ol high -t 1 lab_06_map.ncd lab_06.ncd lab_06.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab_06.twx lab_06.ncd -o lab_06.twr lab_06.pcf -ucf lab_06.ucf 
+bitgen -intstyle ise -f lab_06.ut lab_06.ncd 

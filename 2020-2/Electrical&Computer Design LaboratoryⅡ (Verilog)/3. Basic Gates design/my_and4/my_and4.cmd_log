@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/my_and4/my_and4.xst" -ofn "E:/OneDrive/my_xilinx/my_and4/my_and4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-4 my_and4.ngc my_and4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_and4_map.ncd my_and4.ngd my_and4.pcf 
+par -w -intstyle ise -ol high -t 1 my_and4_map.ncd my_and4.ncd my_and4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_and4.twx my_and4.ncd -o my_and4.twr my_and4.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_and4.ucf -p xc3s200-pq208-4 my_and4.ngc my_and4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_and4_map.ncd my_and4.ngd my_and4.pcf 
+par -w -intstyle ise -ol high -t 1 my_and4_map.ncd my_and4.ncd my_and4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_and4.twx my_and4.ncd -o my_and4.twr my_and4.pcf -ucf my_and4.ucf 
+bitgen -intstyle ise -f my_and4.ut my_and4.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/my_and4/my_and4.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/my_and4/my_and4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_and4.ucf -p xc3s200-pq208-4 my_and4.ngc my_and4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_and4_map.ncd my_and4.ngd my_and4.pcf 
+par -w -intstyle ise -ol high -t 1 my_and4_map.ncd my_and4.ncd my_and4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_and4.twx my_and4.ncd -o my_and4.twr my_and4.pcf -ucf my_and4.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_and4.ucf -p xc3s200-pq208-4 my_and4.ngc my_and4.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_and4_map.ncd my_and4.ngd my_and4.pcf 
+par -w -intstyle ise -ol high -t 1 my_and4_map.ncd my_and4.ncd my_and4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_and4.twx my_and4.ncd -o my_and4.twr my_and4.pcf -ucf my_and4.ucf 
+bitgen -intstyle ise -f my_and4.ut my_and4.ncd 

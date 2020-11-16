@@ -1,0 +1,6 @@
+verilog work "fnd_decoder.v"
+verilog work "fnd_array.v"
+verilog work "bin2bcd.v"
+verilog work "lab_06.v"
+verilog work "lab_06_tb.v"
+verilog work "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

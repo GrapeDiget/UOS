@@ -1,0 +1,12 @@
+net out[7] loc = p176;
+net out[6] loc = p178;
+net out[5] loc = p181;
+net out[4] loc = p182;
+net out[3] loc = p184;
+net out[2] loc = p185;
+net out[1] loc = p187;
+net out[0] loc = p189;
+net bcd[3] loc = p34;
+net bcd[2] loc = p35;
+net bcd[1] loc = p37;
+net bcd[0] loc = p36;

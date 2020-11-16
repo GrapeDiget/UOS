@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/my_and3/my_and3.xst" -ofn "E:/OneDrive/my_xilinx/my_and3/my_and3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_and3.ucf -p xc3s200-pq208-4 my_and3.ngc my_and3.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_and3_map.ncd my_and3.ngd my_and3.pcf 
+par -w -intstyle ise -ol high -t 1 my_and3_map.ncd my_and3.ncd my_and3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_and3.twx my_and3.ncd -o my_and3.twr my_and3.pcf -ucf my_and3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc my_and3.ucf -p xc3s200-pq208-4 my_and3.ngc my_and3.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o my_and3_map.ncd my_and3.ngd my_and3.pcf 
+par -w -intstyle ise -ol high -t 1 my_and3_map.ncd my_and3.ncd my_and3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml my_and3.twx my_and3.ncd -o my_and3.twr my_and3.pcf -ucf my_and3.ucf 
+bitgen -intstyle ise -f my_and3.ut my_and3.ncd 

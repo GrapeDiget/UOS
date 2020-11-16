@@ -1,0 +1,5 @@
+net clk loc = p183;
+net resetn loc = p57;
+net main loc = p191;
+net two loc = p196;
+net four loc = p198;

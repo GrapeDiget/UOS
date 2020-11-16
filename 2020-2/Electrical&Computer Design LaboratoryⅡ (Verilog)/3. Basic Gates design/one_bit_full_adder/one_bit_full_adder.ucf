@@ -1,0 +1,5 @@
+net a loc = p63;
+net b loc = p67;
+net cin loc = p65;
+net cout loc = p191;
+net s loc = p190;

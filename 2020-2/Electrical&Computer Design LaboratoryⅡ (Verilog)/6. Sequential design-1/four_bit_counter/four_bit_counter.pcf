@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 27 13:44:52 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "mode" LOCATE = SITE "P42" LEVEL 1;
+COMP "en" LOCATE = SITE "P43" LEVEL 1;
+COMP "clk" LOCATE = SITE "P183" LEVEL 1;
+COMP "resetn" LOCATE = SITE "P57" LEVEL 1;
+COMP "data_in<0>" LOCATE = SITE "P36" LEVEL 1;
+COMP "data_in<1>" LOCATE = SITE "P37" LEVEL 1;
+COMP "data_in<2>" LOCATE = SITE "P35" LEVEL 1;
+COMP "data_in<3>" LOCATE = SITE "P34" LEVEL 1;
+COMP "load" LOCATE = SITE "P63" LEVEL 1;
+COMP "q<0>" LOCATE = SITE "P200" LEVEL 1;
+COMP "q<1>" LOCATE = SITE "P198" LEVEL 1;
+COMP "q<2>" LOCATE = SITE "P196" LEVEL 1;
+COMP "q<3>" LOCATE = SITE "P191" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

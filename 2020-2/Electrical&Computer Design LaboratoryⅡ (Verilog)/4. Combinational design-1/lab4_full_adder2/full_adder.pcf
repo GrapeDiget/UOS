@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 06 13:43:44 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "cin" LOCATE = SITE "P65" LEVEL 1;
+COMP "s" LOCATE = SITE "P196" LEVEL 1;
+COMP "cout" LOCATE = SITE "P191" LEVEL 1;
+COMP "a" LOCATE = SITE "P63" LEVEL 1;
+COMP "b" LOCATE = SITE "P67" LEVEL 1;
+SCHEMATIC END;
+

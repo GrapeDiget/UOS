@@ -1,0 +1,29 @@
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "E:/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_generator.ucf -p xc3s200-pq208-4 clock_generator.ngc clock_generator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o clock_generator_map.ncd clock_generator.ngd clock_generator.pcf 
+par -w -intstyle ise -ol high -t 1 clock_generator_map.ncd clock_generator.ncd clock_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml clock_generator.twx clock_generator.ncd -o clock_generator.twr clock_generator.pcf -ucf clock_generator.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_generator.ucf -p xc3s200-pq208-4 clock_generator.ngc clock_generator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o clock_generator_map.ncd clock_generator.ngd clock_generator.pcf 
+par -w -intstyle ise -ol high -t 1 clock_generator_map.ncd clock_generator.ncd clock_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml clock_generator.twx clock_generator.ncd -o clock_generator.twr clock_generator.pcf -ucf clock_generator.ucf 
+bitgen -intstyle ise -f clock_generator.ut clock_generator.ncd 
+xst -intstyle ise -ifn "C:/Users/vmfos/OneDrive/my_xilinx/clock_generator/clock_generator.xst" -ofn "C:/Users/vmfos/OneDrive/my_xilinx/clock_generator/clock_generator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_generator.ucf -p xc3s200-pq208-4 clock_generator.ngc clock_generator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o clock_generator_map.ncd clock_generator.ngd clock_generator.pcf 
+par -w -intstyle ise -ol high -t 1 clock_generator_map.ncd clock_generator.ncd clock_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml clock_generator.twx clock_generator.ncd -o clock_generator.twr clock_generator.pcf -ucf clock_generator.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_generator.ucf -p xc3s200-pq208-4 clock_generator.ngc clock_generator.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o clock_generator_map.ncd clock_generator.ngd clock_generator.pcf 
+par -w -intstyle ise -ol high -t 1 clock_generator_map.ncd clock_generator.ncd clock_generator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml clock_generator.twx clock_generator.ncd -o clock_generator.twr clock_generator.pcf -ucf clock_generator.ucf 
+bitgen -intstyle ise -f clock_generator.ut clock_generator.ncd 
