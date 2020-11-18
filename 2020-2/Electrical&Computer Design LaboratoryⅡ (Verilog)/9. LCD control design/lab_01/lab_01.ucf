@@ -1,0 +1,13 @@
+net RESETN loc = p57;
+net CLK loc = p76;
+net LCD_E loc = p154;
+net LCD_RS loc = p156;
+net LCD_RW loc = p155;
+net LCD_DATA[7] loc = p143;
+net LCD_DATA[6] loc = p144;
+net LCD_DATA[5] loc = p146;
+net LCD_DATA[4] loc = p147;
+net LCD_DATA[3] loc = p148;
+net LCD_DATA[2] loc = p149;
+net LCD_DATA[1] loc = p150;
+net LCD_DATA[0] loc = p152;
