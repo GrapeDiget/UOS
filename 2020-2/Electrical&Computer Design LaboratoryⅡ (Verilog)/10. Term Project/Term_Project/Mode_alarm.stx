@@ -1,0 +1,47 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/OneDrive/my_xilinx/Term_Project/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to E:/OneDrive/my_xilinx/Term_Project/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Number_to_code.v" in library work
+Compiling verilog file "note.v" in library work
+Module <Number_to_code> compiled
+Compiling verilog file "Mode_alarm_set.v" in library work
+Module <note> compiled
+Compiling verilog file "Mode_alarm_melody.v" in library work
+Module <Mode_alarm_set> compiled
+Compiling verilog file "Clock_sep.v" in library work
+Module <Mode_alarm_melody> compiled
+Compiling verilog file "Mode_alarm.v" in library work
+Module <Clock_sep> compiled
+Module <Mode_alarm> compiled
+No errors in compilation
+Analysis of file <"Mode_alarm.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+
+Total memory usage is 4476352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

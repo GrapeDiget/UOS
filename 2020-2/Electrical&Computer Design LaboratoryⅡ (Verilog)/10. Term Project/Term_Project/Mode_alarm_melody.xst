@@ -1,0 +1,5 @@
+set -tmpdir "E:/OneDrive/my_xilinx/Term_Project/xst/projnav.tmp"
+set -xsthdpdir "E:/OneDrive/my_xilinx/Term_Project/xst"
+elaborate
+-ifn Mode_alarm_melody.prj
+-ifmt mixed

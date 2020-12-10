@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="Term_Project" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Clock_sep E:|OneDrive|my_xilinx|Term_Project|Clock_sep.v</ClosedNode>
+         <ClosedNode>/Digital_watch C:|Users|vmfos|OneDrive|my_xilinx|Term_Project|Digital_watch.v/Time_module1 - Time_module/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch C:|Users|vmfos|OneDrive|my_xilinx|Term_Project|Digital_watch.v/Time_module1 - Time_module/U2 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M0 - Mode_time/U0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M0 - Mode_time/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M0 - Mode_time/U2 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M2 - Mode_date</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M2 - Mode_date/D0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M2 - Mode_date/Mon0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M4 - Mode_alarm</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M4 - Mode_alarm/M6 - Mode_alarm_melody</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M4 - Mode_alarm/U0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M4 - Mode_alarm/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M4 - Mode_alarm/U2 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/M7 - Mode_world_time</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/Time_module1 - Time_module</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/Time_module1 - Time_module/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v/Time_module1 - Time_module/U2 - Clock_sep</ClosedNode>
+         <ClosedNode>/Mode_date E:|OneDrive|my_xilinx|Term_Project|Mode_date.v/D0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Mode_date E:|OneDrive|my_xilinx|Term_Project|Mode_date.v/Mon0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Mode_stopwatch E:|OneDrive|my_xilinx|Term_Project|Mode_stopwatch.v/U0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Mode_stopwatch E:|OneDrive|my_xilinx|Term_Project|Mode_stopwatch.v/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Mode_stopwatch E:|OneDrive|my_xilinx|Term_Project|Mode_stopwatch.v/U2 - Clock_sep</ClosedNode>
+         <ClosedNode>/Time_module E:|OneDrive|my_xilinx|Term_Project|Time_module.v/U0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Time_module E:|OneDrive|my_xilinx|Term_Project|Time_module.v/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Time_module E:|OneDrive|my_xilinx|Term_Project|Time_module.v/U2 - Clock_sep</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>M4 - Mode_alarm (E:/OneDrive/my_xilinx/Term_Project/Mode_alarm.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >13</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000167000000020000000000000000000000000200000064ffffffff000000810000000300000002000001670000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>M4 - Mode_alarm (E:/OneDrive/my_xilinx/Term_Project/Mode_alarm.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000110000000010000000100000000000000000000000064ffffffff000000810000000000000001000001100000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003a3000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004700000001000000000000002900000001000000000000007a0000000100000000000002b90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Clock_sep.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000117000000010001000100000000000000000000000064ffffffff000000810000000000000001000001170000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013b0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000000c6000000c601000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Digital_watch E:|OneDrive|my_xilinx|Term_Project|Digital_watch.v</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M0 - Mode_time</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M2 - Mode_date/D0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M2 - Mode_date/Mon0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M4 - Mode_alarm/M6 - Mode_alarm_melody</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M4 - Mode_alarm/U0 - Clock_sep</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M4 - Mode_alarm/U1 - Clock_sep</ClosedNode>
+         <ClosedNode>/Term_Project_tb E:|OneDrive|my_xilinx|Term_Project|Term_Project_tb.v/uut - Digital_watch/M4 - Mode_alarm/U2 - Clock_sep</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Term_Project_tb (E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000011c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000011c0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Term_Project_tb (E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+         <ClosedNode>ISim Simulator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

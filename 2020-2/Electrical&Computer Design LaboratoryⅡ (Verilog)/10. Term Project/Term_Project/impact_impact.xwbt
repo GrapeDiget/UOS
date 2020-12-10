@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\vmfos\OneDrive\my_xilinx\Term_Project\impact.xsl
+OUTFILE=C:\Users\vmfos\OneDrive\my_xilinx\Term_Project\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Users\vmfos\OneDrive\my_xilinx\Term_Project
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,6 @@
+verilog work "Number_to_code.v"
+verilog work "note.v"
+verilog work "Mode_alarm_set.v"
+verilog work "Mode_alarm_melody.v"
+verilog work "Clock_sep.v"
+verilog work "Mode_alarm.v"

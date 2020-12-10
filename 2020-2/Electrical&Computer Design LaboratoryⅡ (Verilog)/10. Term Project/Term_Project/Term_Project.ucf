@@ -1,0 +1,41 @@
+//Digital_watch(RESET, CLK_1k, CLK_1M, BUS_INPUT, NUM_INPUT, CHAR_INPUT, LCD_E, LCD_RS, LCD_RW, LCD_DATA, PIEZO);
+
+net RESET loc = p57;
+net CLK_1k loc = p76;
+net CLK_1M loc = p79;
+
+net BUS_INPUT[0] loc = p42;
+net BUS_INPUT[1] loc = p43;
+net BUS_INPUT[2] loc = p39;
+net BUS_INPUT[3] loc = p40;
+net BUS_INPUT[4] loc = p36;
+net BUS_INPUT[5] loc = p37;
+net BUS_INPUT[6] loc = p35;
+net BUS_INPUT[7] loc = p34;
+
+net NUM_INPUT[0] loc = p63;
+net NUM_INPUT[1] loc = p67;
+net NUM_INPUT[2] loc = p65;
+net NUM_INPUT[3] loc = p71;
+
+net CHAR_INPUT[0] loc = p61;
+net CHAR_INPUT[1] loc = p64;
+net CHAR_INPUT[2] loc = p44;
+net CHAR_INPUT[3] loc = p48;
+net CHAR_INPUT[4] loc = p46;
+net CHAR_INPUT[5] loc = p45;
+
+net LCD_E loc = p154;
+net LCD_RS loc = p156;
+net LCD_RW loc = p155;
+
+net LCD_DATA[7] loc = p143;
+net LCD_DATA[6] loc = p144;
+net LCD_DATA[5] loc = p146;
+net LCD_DATA[4] loc = p147;
+net LCD_DATA[3] loc = p148;
+net LCD_DATA[2] loc = p149;
+net LCD_DATA[1] loc = p150;
+net LCD_DATA[0] loc = p152;
+
+net PIEZO loc = p51;

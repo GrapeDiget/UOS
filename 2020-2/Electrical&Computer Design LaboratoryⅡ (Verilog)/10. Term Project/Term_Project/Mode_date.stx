@@ -1,0 +1,93 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/OneDrive/my_xilinx/Term_Project/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to E:/OneDrive/my_xilinx/Term_Project/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Number_to_code.v" in library work
+Compiling verilog file "Clock_sep.v" in library work
+Module <Number_to_code> compiled
+Compiling verilog file "Mode_date.v" in library work
+Module <Clock_sep> compiled
+ERROR:HDLCompilers:26 - "Mode_date.v" line 25 unexpected token: 'reg'
+ERROR:HDLCompilers:26 - "Mode_date.v" line 26 unexpected token: 'reg'
+ERROR:HDLCompilers:26 - "Mode_date.v" line 26 expecting ';', found ','
+ERROR:HDLCompilers:26 - "Mode_date.v" line 26 unexpected token: ','
+ERROR:HDLCompilers:26 - "Mode_date.v" line 26 unexpected token: ';'
+ERROR:HDLCompilers:28 - "Mode_date.v" line 78 'colon' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 91 'colon' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 94 'colon' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 105 'MERIDIEM' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 106 'HOUR' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 107 'MIN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 108 'SEC' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 112 'MERIDIEM' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 112 'meridiem_set' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 113 'HOUR' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 113 'hour_set' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 114 'MIN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 114 'min_set' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 115 'SEC' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 115 'sec_set' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 119 'SEC' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 119 'SEC' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 120 'MIN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 120 'MIN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 121 'HOUR' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 121 'HOUR' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 122 'MERIDIEM' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 122 'MERIDIEM' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 123 'MERIDIEM' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 123 'MERIDIEM' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 125 'HOUR' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 125 'HOUR' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 127 'MIN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 127 'MIN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 129 'SEC' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 129 'SEC' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 142 'EN' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 256 'mer' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 268 'h10' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 272 'h1' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 276 'col' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 280 'm10' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 284 'm1' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 288 'col' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 292 's10' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 296 's1' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 342 'mer' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 354 'h10' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 358 'h1' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 362 'col' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 366 'm10' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 370 'm1' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 374 'col' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 378 's10' has not been declared
+ERROR:HDLCompilers:28 - "Mode_date.v" line 382 's1' has not been declared
+ERROR:HDLCompilers:208 - "Mode_date.v" line 21 Port reference 'MIN' was not declared as input, inout or output
+ERROR:HDLCompilers:208 - "Mode_date.v" line 21 Port reference 'HOUR' was not declared as input, inout or output
+ERROR:HDLCompilers:208 - "Mode_date.v" line 21 Port reference 'SEC' was not declared as input, inout or output
+ERROR:HDLCompilers:208 - "Mode_date.v" line 21 Port reference 'MERIDIEM' was not declared as input, inout or output
+Module <Mode_date> compiled
+Analysis of file <"Mode_date.prj"> failed.
+--> 
+
+Total memory usage is 4468240 kilobytes
+
+Number of errors   :   59 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

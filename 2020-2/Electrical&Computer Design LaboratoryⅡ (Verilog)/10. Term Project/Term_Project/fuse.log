@@ -1,0 +1,42 @@
+Running: D:\Xilinx_directory\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb_isim_beh.exe -prj E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb_beh.prj work.Term_Project_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 6
+Turning on mult-threading, number of parallel sub-compilation jobs: 12 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Number_to_code.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/note.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_time_set.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_date_set.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_alarm_set.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_alarm_melody.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Clock_sep.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_time.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_date.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Mode_alarm.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/In_sync.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.v" into library work
+Analyzing Verilog file "E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx_directory/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module In_sync
+Compiling module Number_to_code
+Compiling module Clock_sep
+Compiling module Mode_time_set
+Compiling module Mode_time
+Compiling module Mode_date_set
+Compiling module Mode_date
+Compiling module Mode_alarm_set
+Compiling module note
+Compiling module Mode_alarm_melody
+Compiling module Mode_alarm
+Compiling module Digital_watch
+Compiling module Term_Project_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 지정된 경로를 찾을 수 없습니다, "isim\Term_Project_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 14 Verilog Units
+Built simulation executable E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb_isim_beh.exe
+Fuse Memory Usage: 31820 KB
+Fuse CPU Usage: 624 ms
