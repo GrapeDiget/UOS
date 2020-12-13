@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Digital_watch.prj
 
@@ -109,8 +109,10 @@ Compiling verilog file "note.v" in library work
 Module <Number_to_code> compiled
 Compiling verilog file "Mode_time_set.v" in library work
 Module <note> compiled
-Compiling verilog file "Mode_date_set.v" in library work
+Compiling verilog file "Mode_timer_set.v" in library work
 Module <Mode_time_set> compiled
+Compiling verilog file "Mode_date_set.v" in library work
+Module <Mode_timer_set> compiled
 Compiling verilog file "Mode_alarm_set.v" in library work
 Module <Mode_date_set> compiled
 Compiling verilog file "Mode_alarm_melody.v" in library work
@@ -119,8 +121,10 @@ Compiling verilog file "Clock_sep.v" in library work
 Module <Mode_alarm_melody> compiled
 Compiling verilog file "Mode_world_time.v" in library work
 Module <Clock_sep> compiled
-Compiling verilog file "Mode_time.v" in library work
+Compiling verilog file "Mode_timer.v" in library work
 Module <Mode_world_time> compiled
+Compiling verilog file "Mode_time.v" in library work
+Module <Mode_timer> compiled
 Compiling verilog file "Mode_stopwatch.v" in library work
 Module <Mode_time> compiled
 Compiling verilog file "Mode_date.v" in library work
@@ -185,6 +189,8 @@ Analyzing hierarchy for module <Mode_world_time> in library <work> with paramete
 
 Analyzing hierarchy for module <Mode_stopwatch> in library <work>.
 
+Analyzing hierarchy for module <Mode_timer> in library <work>.
+
 Analyzing hierarchy for module <Clock_sep> in library <work>.
 
 Analyzing hierarchy for module <Mode_time_set> in library <work>.
@@ -200,6 +206,8 @@ Analyzing hierarchy for module <Mode_alarm_melody> in library <work> with parame
 	good_morning = "10"
 	normal = "00"
 	school_bell = "11"
+
+Analyzing hierarchy for module <Mode_timer_set> in library <work>.
 
 Analyzing hierarchy for module <note> in library <work>.
 
@@ -285,12 +293,21 @@ Module <Mode_world_time> is correct for synthesis.
 Analyzing module <Mode_stopwatch> in library <work>.
 Module <Mode_stopwatch> is correct for synthesis.
  
+Analyzing module <Mode_timer> in library <work>.
+Module <Mode_timer> is correct for synthesis.
+ 
+Analyzing module <Mode_timer_set> in library <work>.
+Module <Mode_timer_set> is correct for synthesis.
+ 
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <tomorrow> in unit <Mode_date> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <timer_cnt> in unit <Mode_timer> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <colon> in unit <Mode_timer> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <In_sync>.
     Related source file is "In_sync.v".
@@ -348,25 +365,25 @@ Synthesizing Unit <Mode_date_set>.
     Found 4-bit register for signal <YEAR100>.
     Found 3-bit addsub for signal <CURSOR$share0000>.
     Found 7-bit comparator greatequal for signal <DAY$cmp_ge0000> created at line 84.
-    Found 7-bit comparator greatequal for signal <DAY$cmp_ge0001> created at line 91.
-    Found 7-bit comparator less for signal <DAY$cmp_lt0000> created at line 140.
+    Found 7-bit comparator greatequal for signal <DAY$cmp_ge0001> created at line 95.
+    Found 7-bit comparator less for signal <DAY$cmp_lt0000> created at line 148.
     Found 7-bit addsub for signal <DAY$share0000>.
-    Found 7-bit comparator greatequal for signal <MONTH$cmp_ge0000> created at line 95.
-    Found 7-bit comparator greatequal for signal <MONTH$cmp_ge0001> created at line 100.
-    Found 7-bit comparator greatequal for signal <MONTH$cmp_ge0002> created at line 101.
-    Found 7-bit comparator lessequal for signal <MONTH$cmp_le0000> created at line 144.
+    Found 7-bit comparator greatequal for signal <MONTH$cmp_ge0000> created at line 99.
+    Found 7-bit comparator greatequal for signal <MONTH$cmp_ge0001> created at line 104.
+    Found 7-bit comparator greatequal for signal <MONTH$cmp_ge0002> created at line 105.
+    Found 7-bit comparator lessequal for signal <MONTH$cmp_le0000> created at line 152.
     Found 7-bit addsub for signal <MONTH$share0000>.
-    Found 4-bit comparator greatequal for signal <YEAR1$cmp_ge0000> created at line 105.
-    Found 4-bit comparator lessequal for signal <YEAR1$cmp_le0000> created at line 154.
+    Found 4-bit comparator greatequal for signal <YEAR1$cmp_ge0000> created at line 109.
+    Found 4-bit comparator lessequal for signal <YEAR1$cmp_le0000> created at line 162.
     Found 4-bit addsub for signal <YEAR1$share0000>.
-    Found 4-bit comparator greatequal for signal <YEAR10$cmp_ge0000> created at line 109.
-    Found 4-bit comparator lessequal for signal <YEAR10$cmp_le0000> created at line 158.
+    Found 4-bit comparator greatequal for signal <YEAR10$cmp_ge0000> created at line 113.
+    Found 4-bit comparator lessequal for signal <YEAR10$cmp_le0000> created at line 166.
     Found 4-bit addsub for signal <YEAR10$share0000>.
-    Found 4-bit comparator greatequal for signal <YEAR100$cmp_ge0000> created at line 113.
-    Found 4-bit comparator lessequal for signal <YEAR100$cmp_le0000> created at line 162.
+    Found 4-bit comparator greatequal for signal <YEAR100$cmp_ge0000> created at line 117.
+    Found 4-bit comparator lessequal for signal <YEAR100$cmp_le0000> created at line 170.
     Found 4-bit addsub for signal <YEAR100$share0000>.
-    Found 4-bit comparator greatequal for signal <YEAR1000$cmp_ge0000> created at line 117.
-    Found 4-bit comparator lessequal for signal <YEAR1000$cmp_le0000> created at line 166.
+    Found 4-bit comparator greatequal for signal <YEAR1000$cmp_ge0000> created at line 121.
+    Found 4-bit comparator lessequal for signal <YEAR1000$cmp_le0000> created at line 174.
     Found 4-bit addsub for signal <YEAR1000$share0000>.
     Summary:
 	inferred  11 D-type flip-flop(s).
@@ -431,6 +448,29 @@ Synthesizing Unit <note>.
 	inferred  15 Comparator(s).
 	inferred  33 Multiplexer(s).
 Unit <note> synthesized.
+
+
+Synthesizing Unit <Mode_timer_set>.
+    Related source file is "Mode_timer_set.v".
+    Found 7-bit register for signal <MIN>.
+    Found 3-bit register for signal <CURSOR>.
+    Found 7-bit register for signal <HOUR>.
+    Found 7-bit register for signal <SEC>.
+    Found 3-bit addsub for signal <CURSOR$share0000>.
+    Found 7-bit comparator greatequal for signal <HOUR$cmp_ge0000> created at line 77.
+    Found 7-bit comparator greatequal for signal <HOUR$cmp_ge0001> created at line 82.
+    Found 7-bit comparator greatequal for signal <HOUR$cmp_ge0002> created at line 83.
+    Found 7-bit addsub for signal <HOUR$share0000>.
+    Found 7-bit addsub for signal <MIN$addsub0000>.
+    Found 7-bit comparator greatequal for signal <MIN$cmp_ge0000> created at line 73.
+    Found 7-bit addsub for signal <SEC$addsub0000>.
+    Found 7-bit comparator greatequal for signal <SEC$cmp_ge0000> created at line 64.
+    Found 7-bit comparator less for signal <SEC$cmp_lt0000> created at line 101.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <Mode_timer_set> synthesized.
 
 
 Synthesizing Unit <Clock_sep>.
@@ -515,6 +555,7 @@ Unit <Mode_alarm_melody> synthesized.
 
 Synthesizing Unit <Mode_time>.
     Related source file is "Mode_time.v".
+WARNING:Xst:646 - Signal <cursor_position> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 7-bit register for signal <MIN>.
     Found 7-bit register for signal <HOUR>.
     Found 1-bit register for signal <RS_OUTPUT>.
@@ -537,7 +578,6 @@ Synthesizing Unit <Mode_time>.
     Found 7-bit adder for signal <MIN$addsub0000> created at line 150.
     Found 7-bit comparator greatequal for signal <MIN$cmp_ge0000> created at line 143.
     Found 1-bit register for signal <pause>.
-    Found 6-bit comparator equal for signal <RS_OUTPUT$cmp_eq0002>.
     Found 7-bit adder for signal <SEC$addsub0000> created at line 152.
     Found 7-bit comparator greatequal for signal <SEC$cmp_ge0000> created at line 142.
     Found 6-bit register for signal <time_cnt>.
@@ -546,45 +586,42 @@ Synthesizing Unit <Mode_time>.
     Summary:
 	inferred  64 D-type flip-flop(s).
 	inferred   5 Adder/Subtractor(s).
-	inferred  11 Comparator(s).
+	inferred  10 Comparator(s).
 	inferred  32 Multiplexer(s).
 Unit <Mode_time> synthesized.
 
 
 Synthesizing Unit <Mode_date>.
     Related source file is "Mode_date.v".
+WARNING:Xst:646 - Signal <cursor_position> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <RS_OUTPUT>.
     Found 1-bit register for signal <RW_OUTPUT>.
     Found 8-bit register for signal <DATA_OUTPUT>.
     Found 6-bit register for signal <cnt>.
-    Found 6-bit adder for signal <cnt$addsub0000> created at line 182.
-    Found 6-bit comparator greatequal for signal <cnt$cmp_ge0000> created at line 179.
+    Found 6-bit adder for signal <cnt$addsub0000> created at line 193.
+    Found 6-bit comparator greatequal for signal <cnt$cmp_ge0000> created at line 190.
     Found 7-bit register for signal <day>.
-    Found 7-bit adder for signal <day$addsub0000> created at line 166.
     Found 7-bit register for signal <month>.
-    Found 7-bit adder for signal <month$share0000>.
-    Found 7-bit comparator equal for signal <RS_OUTPUT$cmp_eq0002>.
-    Found 1-bit register for signal <tomorrow>.
-    Found 7-bit comparator greatequal for signal <tomorrow$cmp_ge0000> created at line 99.
-    Found 7-bit comparator greatequal for signal <tomorrow$cmp_ge0001> created at line 99.
-    Found 7-bit comparator greatequal for signal <tomorrow$cmp_ge0002> created at line 99.
+    Found 1-bit register for signal <tomorrow_cnt>.
+    Found 1-bit adder for signal <tomorrow_cnt$addsub0000> created at line 108.
+    Found 7-bit comparator greatequal for signal <tomorrow_cnt$cmp_ge0000> created at line 102.
+    Found 7-bit comparator greatequal for signal <tomorrow_cnt$cmp_ge0001> created at line 102.
+    Found 7-bit comparator greatequal for signal <tomorrow_cnt$cmp_ge0002> created at line 102.
     Found 4-bit register for signal <year_1>.
-    Found 4-bit adder for signal <year_1$addsub0000> created at line 148.
     Found 4-bit register for signal <year_10>.
-    Found 4-bit adder for signal <year_10$addsub0000> created at line 145.
     Found 4-bit register for signal <year_100>.
-    Found 4-bit adder for signal <year_100$addsub0000> created at line 142.
     Found 4-bit register for signal <year_1000>.
-    Found 4-bit adder for signal <year_1000$addsub0000> created at line 139.
     Summary:
 	inferred  17 D-type flip-flop(s).
-	inferred   7 Adder/Subtractor(s).
-	inferred   5 Comparator(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
 Unit <Mode_date> synthesized.
 
 
 Synthesizing Unit <Mode_alarm>.
     Related source file is "Mode_alarm.v".
+WARNING:Xst:646 - Signal <melody_sel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cursor_position> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <RS_OUTPUT>.
     Found 1-bit register for signal <RW_OUTPUT>.
     Found 8-bit register for signal <DATA_OUTPUT>.
@@ -593,21 +630,20 @@ Synthesizing Unit <Mode_alarm>.
     Found 7-bit register for signal <alarm_min>.
     Found 7-bit register for signal <alarm_sec>.
     Found 32-bit register for signal <clock_cnt>.
-    Found 32-bit adder for signal <clock_cnt$addsub0000> created at line 113.
-    Found 33-bit comparator greatequal for signal <clock_cnt$cmp_ge0000> created at line 109.
+    Found 32-bit adder for signal <clock_cnt$addsub0000> created at line 114.
+    Found 33-bit comparator greatequal for signal <clock_cnt$cmp_ge0000> created at line 110.
     Found 32-bit 4-to-1 multiplexer for signal <clock_cnt$mux0000>.
     Found 6-bit register for signal <cnt>.
-    Found 6-bit adder for signal <cnt$addsub0000> created at line 181.
-    Found 6-bit comparator greatequal for signal <cnt$cmp_ge0000> created at line 178.
+    Found 6-bit adder for signal <cnt$addsub0000> created at line 184.
+    Found 6-bit comparator greatequal for signal <cnt$cmp_ge0000> created at line 181.
     Found 1-bit register for signal <colon>.
-    Found 33-bit comparator less for signal <colon$cmp_lt0000> created at line 112.
+    Found 33-bit comparator less for signal <colon$cmp_lt0000> created at line 113.
     Found 1-bit register for signal <melody_on>.
-    Found 22-bit comparator equal for signal <melody_on$cmp_eq0001> created at line 147.
-    Found 6-bit comparator equal for signal <RS_OUTPUT$cmp_eq0002>.
+    Found 22-bit comparator equal for signal <melody_on$cmp_eq0000> created at line 148.
     Summary:
 	inferred  57 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred   5 Comparator(s).
+	inferred   4 Comparator(s).
 	inferred  32 Multiplexer(s).
 Unit <Mode_alarm> synthesized.
 
@@ -705,9 +741,30 @@ Synthesizing Unit <Mode_stopwatch>.
 Unit <Mode_stopwatch> synthesized.
 
 
+Synthesizing Unit <Mode_timer>.
+    Related source file is "Mode_timer.v".
+WARNING:Xst:646 - Signal <cursor_position> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <SOUND>.
+    Found 1-bit register for signal <RS_OUTPUT>.
+    Found 1-bit register for signal <RW_OUTPUT>.
+    Found 8-bit register for signal <DATA_OUTPUT>.
+    Found 1-bit register for signal <pause>.
+    Found 1-bit register for signal <sound_en>.
+    Found 6-bit register for signal <time_cnt>.
+    Found 6-bit adder for signal <time_cnt$addsub0000> created at line 186.
+    Found 6-bit comparator greatequal for signal <time_cnt$cmp_ge0000> created at line 183.
+    Found 7-bit register for signal <timer_hour>.
+    Found 7-bit register for signal <timer_min>.
+    Found 7-bit register for signal <timer_sec>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <Mode_timer> synthesized.
+
+
 Synthesizing Unit <Digital_watch>.
     Related source file is "Digital_watch.v".
-WARNING:Xst:1780 - Signal <stopwach_rw> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_3> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -726,7 +783,7 @@ WARNING:Xst:1780 - Signal <stopwach_rw> is never used or assigned. This unconnec
     Found 1-bit register for signal <LCD_RS>.
     Found 1-bit register for signal <LCD_RW>.
     Found 32-bit register for signal <cnt>.
-    Found 32-bit adder for signal <cnt$share0000> created at line 216.
+    Found 32-bit adder for signal <cnt$share0000> created at line 233.
     Found 4-bit register for signal <mode>.
     Found 4-bit register for signal <next_mode>.
     Found 8-bit register for signal <output_data>.
@@ -746,45 +803,43 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 37
+# ROMs                                                 : 43
  16x16-bit ROM                                         : 1
  16x28-bit ROM                                         : 1
  16x4-bit ROM                                          : 1
- 16x8-bit ROM                                          : 34
-# Adders/Subtractors                                   : 72
+ 16x8-bit ROM                                          : 40
+# Adders/Subtractors                                   : 74
  2-bit addsub                                          : 1
- 3-bit addsub                                          : 3
+ 3-bit addsub                                          : 4
  32-bit adder                                          : 6
- 4-bit adder                                           : 5
+ 4-bit adder                                           : 1
  4-bit addsub                                          : 5
- 4-bit subtractor                                      : 15
- 6-bit adder                                           : 5
- 7-bit adder                                           : 16
- 7-bit addsub                                          : 8
+ 4-bit subtractor                                      : 18
+ 6-bit adder                                           : 6
+ 7-bit adder                                           : 14
+ 7-bit addsub                                          : 11
  7-bit subtractor                                      : 8
 # Counters                                             : 1
  32-bit up counter                                     : 1
-# Registers                                            : 122
- 1-bit register                                        : 65
+# Registers                                            : 134
+ 1-bit register                                        : 68
  2-bit register                                        : 1
- 3-bit register                                        : 3
+ 3-bit register                                        : 4
  32-bit register                                       : 6
  4-bit register                                        : 14
- 6-bit register                                        : 5
- 7-bit register                                        : 19
- 8-bit register                                        : 9
-# Comparators                                          : 236
+ 6-bit register                                        : 6
+ 7-bit register                                        : 25
+ 8-bit register                                        : 10
+# Comparators                                          : 267
  22-bit comparator equal                               : 1
  33-bit comparator greatequal                          : 21
  33-bit comparator less                                : 5
  4-bit comparator greatequal                           : 4
  4-bit comparator lessequal                            : 4
- 6-bit comparator equal                                : 2
- 6-bit comparator greatequal                           : 5
- 7-bit comparator equal                                : 1
- 7-bit comparator greatequal                           : 29
- 7-bit comparator less                                 : 8
- 7-bit comparator lessequal                            : 156
+ 6-bit comparator greatequal                           : 6
+ 7-bit comparator greatequal                           : 31
+ 7-bit comparator less                                 : 9
+ 7-bit comparator lessequal                            : 186
 # Multiplexers                                         : 13
  1-bit 16-to-1 multiplexer                             : 2
  1-bit 8-to-1 multiplexer                              : 2
@@ -865,38 +920,36 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 4
-# ROMs                                                 : 37
+# ROMs                                                 : 43
  16x16-bit ROM                                         : 1
  16x28-bit ROM                                         : 1
  16x4-bit ROM                                          : 1
- 16x8-bit ROM                                          : 34
-# Adders/Subtractors                                   : 72
+ 16x8-bit ROM                                          : 40
+# Adders/Subtractors                                   : 74
  2-bit addsub                                          : 1
- 3-bit addsub                                          : 3
+ 3-bit addsub                                          : 4
  32-bit adder                                          : 6
- 4-bit adder                                           : 5
+ 4-bit adder                                           : 1
  4-bit addsub                                          : 5
- 4-bit subtractor                                      : 15
- 6-bit adder                                           : 5
- 7-bit adder                                           : 16
- 7-bit addsub                                          : 8
+ 4-bit subtractor                                      : 18
+ 6-bit adder                                           : 6
+ 7-bit adder                                           : 14
+ 7-bit addsub                                          : 11
  7-bit subtractor                                      : 8
 # Counters                                             : 1
  32-bit up counter                                     : 1
-# Registers                                            : 559
- Flip-Flops                                            : 559
-# Comparators                                          : 236
+# Registers                                            : 621
+ Flip-Flops                                            : 621
+# Comparators                                          : 267
  22-bit comparator equal                               : 1
  33-bit comparator greatequal                          : 21
  33-bit comparator less                                : 5
  4-bit comparator greatequal                           : 4
  4-bit comparator lessequal                            : 4
- 6-bit comparator equal                                : 2
- 6-bit comparator greatequal                           : 5
- 7-bit comparator equal                                : 1
- 7-bit comparator greatequal                           : 29
- 7-bit comparator less                                 : 8
- 7-bit comparator lessequal                            : 156
+ 6-bit comparator greatequal                           : 6
+ 7-bit comparator greatequal                           : 31
+ 7-bit comparator less                                 : 9
+ 7-bit comparator lessequal                            : 186
 # Multiplexers                                         : 13
  1-bit 16-to-1 multiplexer                             : 2
  1-bit 8-to-1 multiplexer                              : 2
@@ -927,6 +980,8 @@ Optimizing unit <Mode_alarm_set> ...
 
 Optimizing unit <note> ...
 
+Optimizing unit <Mode_timer_set> ...
+
 Optimizing unit <Mode_date_set> ...
 
 Optimizing unit <Clock_sep> ...
@@ -947,13 +1002,18 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sec_6> (without ini
 WARNING:Xst:1710 - FF/Latch <min_6> (without init value) has a constant value of 0 in block <Mode_stopwatch>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sec_6> (without init value) has a constant value of 0 in block <Mode_stopwatch>. This FF/Latch will be trimmed during the optimization process.
 
+Optimizing unit <Mode_timer> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Digital_watch, actual ratio is 111.
+INFO:Xst:2261 - The FF/Latch <M0/RW_OUTPUT> in Unit <Digital_watch> is equivalent to the following 4 FFs/Latches, which will be removed : <M2/RW_OUTPUT> <M4/RW_OUTPUT> <M7/RW_OUTPUT> <M8/RW_OUTPUT> 
+Found area constraint ratio of 100 (+ 5) on block Digital_watch, actual ratio is 113.
 Optimizing block <Digital_watch> to meet ratio 100 (+ 5) of 1920 slices :
-Area constraint is met for block <Digital_watch>, final ratio is 88.
-FlipFlop N0/in_sync has been replicated 2 time(s)
-FlipFlop N1/in_sync has been replicated 2 time(s)
+Area constraint is met for block <Digital_watch>, final ratio is 90.
+INFO:Xst:2260 - The FF/Latch <M0/RW_OUTPUT> in Unit <Digital_watch> is equivalent to the following FF/Latch : <M9/RW_OUTPUT> 
+INFO:Xst:2261 - The FF/Latch <M0/RW_OUTPUT> in Unit <Digital_watch> is equivalent to the following FF/Latch, which will be removed : <M9/RW_OUTPUT> 
+FlipFlop N0/in_sync has been replicated 1 time(s)
+FlipFlop N1/in_sync has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -961,8 +1021,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 600
- Flip-Flops                                            : 600
+# Registers                                            : 655
+ Flip-Flops                                            : 655
 
 =========================================================================
 
@@ -991,32 +1051,32 @@ Design Statistics
 # IOs                              : 33
 
 Cell Usage :
-# BELS                             : 4373
+# BELS                             : 4489
 #      GND                         : 1
-#      INV                         : 82
+#      INV                         : 86
 #      LUT1                        : 211
-#      LUT2                        : 180
-#      LUT2_D                      : 21
-#      LUT2_L                      : 15
-#      LUT3                        : 462
-#      LUT3_D                      : 41
-#      LUT3_L                      : 58
-#      LUT4                        : 1842
-#      LUT4_D                      : 86
-#      LUT4_L                      : 144
-#      MUXCY                       : 557
-#      MUXF5                       : 289
+#      LUT2                        : 190
+#      LUT2_D                      : 17
+#      LUT2_L                      : 18
+#      LUT3                        : 532
+#      LUT3_D                      : 20
+#      LUT3_L                      : 32
+#      LUT4                        : 1938
+#      LUT4_D                      : 45
+#      LUT4_L                      : 80
+#      MUXCY                       : 575
+#      MUXF5                       : 339
 #      MUXF6                       : 69
 #      MUXF7                       : 34
 #      VCC                         : 1
-#      XORCY                       : 280
-# FlipFlops/Latches                : 600
-#      FDC                         : 268
-#      FDCE                        : 248
+#      XORCY                       : 301
+# FlipFlops/Latches                : 655
+#      FDC                         : 280
+#      FDCE                        : 295
 #      FDCP                        : 18
-#      FDP                         : 30
+#      FDP                         : 28
 #      FDPE                        : 12
-#      FDR_1                       : 24
+#      FDR_1                       : 22
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -1030,9 +1090,9 @@ Device utilization summary:
 
 Selected Device : 3s200pq208-4 
 
- Number of Slices:                     1638  out of   1920    85%  
- Number of Slice Flip Flops:            600  out of   3840    15%  
- Number of 4 input LUTs:               3142  out of   3840    81%  
+ Number of Slices:                     1663  out of   1920    86%  
+ Number of Slice Flip Flops:            655  out of   3840    17%  
+ Number of 4 input LUTs:               3169  out of   3840    82%  
  Number of IOs:                          33
  Number of bonded IOBs:                  33  out of    141    23%  
  Number of GCLKs:                         2  out of      8    25%  
@@ -1058,7 +1118,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK_1k                             | IBUF+BUFG              | 567   |
+CLK_1k                             | IBUF+BUFG              | 622   |
 CLK_1M                             | BUFGP                  | 33    |
 -----------------------------------+------------------------+-------+
 
@@ -1067,7 +1127,7 @@ Asynchronous Control Signals Information:
 -------------------------------------------------------+------------------------+-------+
 Control Signal                                         | Buffer(FF name)        | Load  |
 -------------------------------------------------------+------------------------+-------+
-M0/DATA_OUTPUT_Acst_inv(RESET_inv1_INV_0:O)            | NONE(LCD_DATA_0)       | 558   |
+M0/DATA_OUTPUT_Acst_inv(RESET_inv1_INV_0:O)            | NONE(LCD_DATA_0)       | 615   |
 M7/world_hour_0_and0000(M7/world_hour_0_and00001:O)    | NONE(M7/world_hour_0)  | 1     |
 M7/world_hour_0_and0001(M7/world_hour_0_and00011:O)    | NONE(M7/world_hour_0)  | 1     |
 M7/world_hour_1_and0000(M7/world_hour_1_and00001:O)    | NONE(M7/world_hour_1)  | 1     |
@@ -1110,8 +1170,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 18.026ns (Maximum Frequency: 55.475MHz)
-   Minimum input arrival time before clock: 12.987ns
+   Minimum period: 19.001ns (Maximum Frequency: 52.629MHz)
+   Minimum input arrival time before clock: 10.580ns
    Maximum output required time after clock: 7.488ns
    Maximum combinational path delay: 7.342ns
 
@@ -1121,37 +1181,36 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_1k'
-  Clock period: 18.026ns (frequency: 55.475MHz)
-  Total number of paths / destination ports: 59394 / 816
+  Clock period: 19.001ns (frequency: 52.629MHz)
+  Total number of paths / destination ports: 63529 / 918
 -------------------------------------------------------------------------
-Delay:               9.013ns (Levels of Logic = 6)
-  Source:            N0/in_sync_1 (FF)
-  Destination:       M0/M1/HOUR_0 (FF)
+Delay:               9.501ns (Levels of Logic = 5)
+  Source:            N1/in_sync (FF)
+  Destination:       M0/M1/HOUR_1 (FF)
   Source Clock:      CLK_1k falling
   Destination Clock: CLK_1k rising
 
-  Data Path: N0/in_sync_1 to M0/M1/HOUR_0
+  Data Path: N1/in_sync to M0/M1/HOUR_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR_1:C->Q            3   0.720   0.975  N0/in_sync_1 (N0/in_sync_1)
-     LUT4:I2->O            8   0.551   1.151  M0/M1/HOUR_mux0002 (M0/M1/HOUR_mux0002)
-     LUT3:I2->O            1   0.551   0.000  M0/M1/Maddsub_HOUR_share0000_lut<0> (M0/M1/Maddsub_HOUR_share0000_lut<0>)
-     XORCY:LI->O           3   0.622   0.933  M0/M1/Maddsub_HOUR_share0000_xor<0> (M0/M1/HOUR_share0000<0>)
-     LUT4:I3->O            1   0.551   0.827  M0/M1/HOUR_mux0000<6>95 (M0/M1/HOUR_mux0000<6>95)
-     LUT4:I3->O            1   0.551   0.827  M0/M1/HOUR_mux0000<6>155 (M0/M1/HOUR_mux0000<6>155)
-     LUT4:I3->O            1   0.551   0.000  M0/M1/HOUR_mux0000<6>201 (M0/M1/HOUR_mux0000<6>)
-     FDCE:D                    0.203          M0/M1/HOUR_0
+     FDR_1:C->Q           71   0.720   2.416  N1/in_sync (N1/in_sync)
+     LUT2:I0->O           36   0.551   1.902  M9/M10/HOUR_and00011 (M0/M1/HOUR_and0000)
+     LUT4:I3->O            1   0.551   0.869  M4/M5/HOUR_mux0000<5>145 (M4/M5/HOUR_mux0000<5>145)
+     LUT3:I2->O            1   0.551   0.000  M4/M5/HOUR_mux0000<5>184_F (N754)
+     MUXF5:I0->O           1   0.360   0.827  M4/M5/HOUR_mux0000<5>184 (M4/M5/HOUR_mux0000<5>184)
+     LUT4:I3->O            1   0.551   0.000  M4/M5/HOUR_mux0000<5>213 (M4/M5/HOUR_mux0000<5>)
+     FDCE:D                    0.203          M4/M5/HOUR_1
     ----------------------------------------
-    Total                      9.013ns (4.300ns logic, 4.713ns route)
-                                       (47.7% logic, 52.3% route)
+    Total                      9.501ns (3.487ns logic, 6.014ns route)
+                                       (36.7% logic, 63.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_1M'
-  Clock period: 9.243ns (frequency: 108.190MHz)
+  Clock period: 9.099ns (frequency: 109.902MHz)
   Total number of paths / destination ports: 20005 / 33
 -------------------------------------------------------------------------
-Delay:               9.243ns (Levels of Logic = 33)
+Delay:               9.099ns (Levels of Logic = 33)
   Source:            M4/M6/U0/cnt_sound_4 (FF)
   Destination:       M4/M6/U0/cnt_sound_31 (FF)
   Source Clock:      CLK_1M rising
@@ -1190,42 +1249,40 @@ Delay:               9.243ns (Levels of Logic = 33)
      MUXCY:CI->O           1   0.064   0.000  M4/M6/U0/Madd_cnt_sound_share0000_cy<28> (M4/M6/U0/Madd_cnt_sound_share0000_cy<28>)
      MUXCY:CI->O           1   0.064   0.000  M4/M6/U0/Madd_cnt_sound_share0000_cy<29> (M4/M6/U0/Madd_cnt_sound_share0000_cy<29>)
      MUXCY:CI->O           0   0.064   0.000  M4/M6/U0/Madd_cnt_sound_share0000_cy<30> (M4/M6/U0/Madd_cnt_sound_share0000_cy<30>)
-     XORCY:CI->O           8   0.904   1.422  M4/M6/U0/Madd_cnt_sound_share0000_xor<31> (M4/M6/U0/cnt_sound_share0000<31>)
-     LUT4:I0->O            1   0.551   0.000  M4/M6/U0/Mmux_cnt_sound_mux0000_62 (M4/M6/U0/Mmux_cnt_sound_mux0000_62)
+     XORCY:CI->O           8   0.904   1.278  M4/M6/U0/Madd_cnt_sound_share0000_xor<31> (M4/M6/U0/cnt_sound_share0000<31>)
+     LUT4:I1->O            1   0.551   0.000  M4/M6/U0/Mmux_cnt_sound_mux0000_62 (M4/M6/U0/Mmux_cnt_sound_mux0000_62)
      MUXF5:I1->O           1   0.360   0.000  M4/M6/U0/Mmux_cnt_sound_mux0000_5_f5_0 (M4/M6/U0/Mmux_cnt_sound_mux0000_5_f51)
      MUXF6:I1->O           1   0.342   0.000  M4/M6/U0/Mmux_cnt_sound_mux0000_4_f6 (M4/M6/U0/Mmux_cnt_sound_mux0000_4_f6)
      MUXF7:I0->O           1   0.342   0.000  M4/M6/U0/Mmux_cnt_sound_mux0000_2_f7 (M4/M6/U0/cnt_sound_mux0000<0>)
      FDC:D                     0.203          M4/M6/U0/cnt_sound_31
     ----------------------------------------
-    Total                      9.243ns (6.137ns logic, 3.106ns route)
-                                       (66.4% logic, 33.6% route)
+    Total                      9.099ns (6.137ns logic, 2.962ns route)
+                                       (67.4% logic, 32.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_1k'
-  Total number of paths / destination ports: 256 / 86
+  Total number of paths / destination ports: 109 / 51
 -------------------------------------------------------------------------
-Offset:              12.987ns (Levels of Logic = 9)
+Offset:              10.580ns (Levels of Logic = 7)
   Source:            RESET (PAD)
-  Destination:       M4/DATA_OUTPUT_6 (FF)
+  Destination:       M8/DATA_OUTPUT_3 (FF)
   Destination Clock: CLK_1k rising
 
-  Data Path: RESET to M4/DATA_OUTPUT_6
+  Data Path: RESET to M8/DATA_OUTPUT_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            68   0.821   2.398  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            1   0.551   0.827  M4/cursor_position<1>1 (M4/cursor_position<1>)
-     LUT4:I3->O            1   0.551   0.869  M4/RS_OUTPUT_cmp_eq0002626 (M4/RS_OUTPUT_cmp_eq0002626)
-     LUT4_D:I2->O          5   0.551   1.260  M4/RS_OUTPUT_cmp_eq0002669 (M4/RS_OUTPUT_cmp_eq0002)
-     LUT4_D:I0->LO         1   0.551   0.295  M4/DATA_OUTPUT_mux0000<2>471 (N1275)
-     LUT4:I1->O            1   0.551   0.869  M4/DATA_OUTPUT_mux0000<1>13 (M4/DATA_OUTPUT_mux0000<1>13)
-     LUT4_L:I2->LO         1   0.551   0.168  M4/DATA_OUTPUT_mux0000<1>67_SW0 (N528)
-     LUT4:I2->O            1   0.551   0.869  M4/DATA_OUTPUT_mux0000<1>67 (M4/DATA_OUTPUT_mux0000<1>67)
-     LUT4:I2->O            1   0.551   0.000  M4/DATA_OUTPUT_mux0000<1>89 (M4/DATA_OUTPUT_mux0000<1>)
-     FDC:D                     0.203          M4/DATA_OUTPUT_6
+     IBUF:I->O            56   0.821   2.186  RESET_IBUF (RESET_IBUF)
+     LUT4:I1->O            1   0.551   0.869  M8/DATA_OUTPUT_mux0000<6>1_SW0 (N163)
+     LUT4:I2->O            3   0.551   0.933  M8/DATA_OUTPUT_mux0000<6>1 (M8/N38)
+     LUT4:I3->O            1   0.551   1.140  M8/DATA_OUTPUT_mux0000<4>21 (M8/DATA_OUTPUT_mux0000<4>21)
+     LUT3:I0->O            1   0.551   0.827  M8/DATA_OUTPUT_mux0000<4>97 (M8/DATA_OUTPUT_mux0000<4>97)
+     LUT4_L:I3->LO         1   0.551   0.295  M8/DATA_OUTPUT_mux0000<4>441 (M8/DATA_OUTPUT_mux0000<4>441)
+     LUT4:I1->O            1   0.551   0.000  M8/DATA_OUTPUT_mux0000<4>1159 (M8/DATA_OUTPUT_mux0000<4>)
+     FDC:D                     0.203          M8/DATA_OUTPUT_3
     ----------------------------------------
-    Total                     12.987ns (5.432ns logic, 7.555ns route)
-                                       (41.8% logic, 58.2% route)
+    Total                     10.580ns (4.330ns logic, 6.250ns route)
+                                       (40.9% logic, 59.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_1M'
@@ -1287,13 +1344,13 @@ Delay:               7.342ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 21.80 secs
+Total CPU time to Xst completion: 21.26 secs
  
 --> 
 
-Total memory usage is 4630116 kilobytes
+Total memory usage is 4630160 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   15 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

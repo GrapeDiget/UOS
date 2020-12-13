@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=E:\OneDrive\my_xilinx\Term_Project\Digital_watch.ncd
-OUTFILE=E:\OneDrive\my_xilinx\Term_Project\Digital_watch.bit
+INFILE=C:\Users\HO\Desktop\Term_Project\Digital_watch.ncd
+OUTFILE=C:\Users\HO\Desktop\Term_Project\Digital_watch.bit
 FAMILY=Spartan3
 PART=xc3s200-4pq208
-WORKINGDIR=E:\OneDrive\my_xilinx\Term_Project
+WORKINGDIR=C:\Users\HO\Desktop\Term_Project
 LICENSE=WebPack
 USER_INFO=212027314_0_0_253

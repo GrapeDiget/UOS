@@ -18,12 +18,13 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, MIN, SEC, RW_OUTPUT, RS_OUTPUT, DATA_OUTPUT, PIEZO);
+module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, MIN, SEC, TIMER_SOUND, RW_OUTPUT, RS_OUTPUT, DATA_OUTPUT, PIEZO);
    input RESET, CLK, CLK_1M;
 	input [3:0] NUM_SYNC, MODE;
 	input C_INPUT;
 	input MERIDIEM;
 	input [6:0] HOUR, MIN, SEC;
+	input TIMER_SOUND;
 	output reg RW_OUTPUT, RS_OUTPUT;
 	output reg [7:0] DATA_OUTPUT;
 	output PIEZO;
@@ -103,7 +104,7 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 			colon = 0;
 		end
 		else begin
-				if(MODE == 4'b0101)		//mode = alarm_set이면 카운트 초기화
+				if(MODE == 4'b0000)		//mode = alarm_set이면 카운트 초기화
 					clock_cnt = 0;
 				else begin		
 					if(clock_cnt >= 999) begin		  
@@ -127,7 +128,7 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 			alarm_sec = 0;
 		end
 		else begin
-			if(MODE == 4'b0101) begin
+			if(MODE == 4'b0000) begin
 				alarm_meridiem = meridiem_set;
 				alarm_hour = hour_set;
 				alarm_min = min_set;
@@ -146,7 +147,9 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 		else begin
 			if(melody_on == 0 && {MERIDIEM, HOUR, MIN, SEC} == {alarm_meridiem, alarm_hour, alarm_min, alarm_sec})
 				melody_on = 1;
-			else if(MODE == 4'b0110) begin
+			else if(TIMER_SOUND == 1)
+				melody_on = 1;
+			else if(MODE == 4'b0000) begin
 				if(NUM_SYNC[2] == 1 && NUM_SYNC[3] == 0) begin
 					melody_on = 0;
 					melody_on = 1;
@@ -174,7 +177,7 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 		if(!RESET)
 			cnt = 0;
 		else begin
-			if(MODE == 4'b0100 || MODE == 4'b0101 || MODE == 4'b0110) begin
+			if(MODE == 4'b0000 || MODE == 4'b0000 || MODE == 4'b0000) begin
 				if(cnt >= 35)
 					cnt = 0;
 				else
@@ -192,7 +195,7 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 			DATA_OUTPUT = 8'b00000010;	
 		end
 		else begin
-			if(MODE == 4'b0100) begin					//mode = alarm
+			if(MODE == 4'b0000) begin					//mode = alarm
 				RW_OUTPUT = 1'b0;
 					case(cnt)
 						0 : begin							//LINE1 작성
@@ -338,7 +341,7 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 					endcase
 			end
 
-			else if(MODE == 4'b0101) begin			//mode = alarm_set
+			else if(MODE == 4'b0000) begin			//mode = alarm_set
 					RW_OUTPUT = 1'b0;
 					case(cnt)
 						0 : begin							//LINE1 작성
@@ -424,7 +427,7 @@ module Mode_alarm(RESET, CLK, CLK_1M, NUM_SYNC, C_INPUT, MODE, MERIDIEM, HOUR, M
 					endcase
 			end
 			
-			else if(MODE == 4'b0110) begin			//mode = alarm_melody
+			else if(MODE == 4'b0000) begin			//mode = alarm_melody
 				case(melody_sel)
 					2'b00 : begin
 						RW_OUTPUT = 1'b0;

@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Dec 07 03:02:25 2020
+Sun Dec 13 18:30:56 2020
 
 drc -z Digital_watch.ncd Digital_watch.pcf
 

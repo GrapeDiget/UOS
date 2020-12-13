@@ -30,7 +30,7 @@ module Mode_time_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, MERIDIEM, HOUR, MIN, SE
 		if(!RESET)
 			CURSOR = 0;
 		else begin
-			if(MODE == 4'b0001) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[2] == 1 && NUM_SYNC[3] == 0) begin
 					if(CURSOR == 6)	CURSOR = 0;
 					else					CURSOR = CURSOR + 1;
@@ -54,7 +54,7 @@ module Mode_time_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, MERIDIEM, HOUR, MIN, SE
 			SEC = 0;
 		end
 		else begin
-			if(MODE == 4'b0001) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[0] == 1 && NUM_SYNC[1] == 0) begin
 					case (CURSOR)
 						0 : begin

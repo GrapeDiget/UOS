@@ -45,7 +45,7 @@ module Mode_alarm_melody(RESET, CLK, CLK_1M, NUM_SYNC, MODE, EN, MELODY_SEL, PIE
 		if(!RESET)
 			MELODY_SEL = normal;
 		else begin
-			if(MODE == 4'b0110) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[2] == 1 && NUM_SYNC[3] == 0) begin
 					if(MELODY_SEL == normal)	MELODY_SEL = school_bell;
 					else								MELODY_SEL = MELODY_SEL - 1;
@@ -784,26 +784,5 @@ module Mode_alarm_melody(RESET, CLK, CLK_1M, NUM_SYNC, MODE, EN, MELODY_SEL, PIE
 			end
 		end
 	end
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 endmodule

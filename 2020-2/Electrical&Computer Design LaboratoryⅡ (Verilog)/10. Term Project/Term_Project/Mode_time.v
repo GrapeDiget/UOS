@@ -107,7 +107,7 @@ module Mode_time(RESET, CLK, NUM_SYNC, CHAR_SYNC, MODE, EN, RW_OUTPUT, RS_OUTPUT
 			else begin
 				if(CHAR_SYNC[0] == 1)			//A를 누르면 시간 흐름 일시 정지
 					pause = 1;
-				else if(MODE == 4'b0001)		//mode = time_set이면 카운트 초기화
+				else if(MODE == 4'b0000)		//mode = time_set이면 카운트 초기화
 					clock_cnt = 0;
 				else begin		
 					if(clock_cnt >= 999) begin		  
@@ -131,7 +131,7 @@ module Mode_time(RESET, CLK, NUM_SYNC, CHAR_SYNC, MODE, EN, RW_OUTPUT, RS_OUTPUT
 			SEC = 0;
 		end
 		else begin
-			if(MODE == 4'b0001) begin 			//mode = time_set이면 시간값에 time_set 모듈의 출력을 입력
+			if(MODE == 4'b0000) begin 			//mode = time_set이면 시간값에 time_set 모듈의 출력을 입력
 				MERIDIEM = meridiem_set;
 				HOUR = hour_set;
 				MIN = min_set;
@@ -164,7 +164,7 @@ module Mode_time(RESET, CLK, NUM_SYNC, CHAR_SYNC, MODE, EN, RW_OUTPUT, RS_OUTPUT
 		else if(!EN)
 			time_cnt = 0;
 		else begin
-			if(MODE == 4'b0000 || MODE == 4'b0001) begin
+			if(MODE == 4'b0000 || MODE == 4'b0000) begin
 				if(time_cnt >= 35)
 					time_cnt = 0;
 				else
@@ -328,7 +328,7 @@ module Mode_time(RESET, CLK, NUM_SYNC, CHAR_SYNC, MODE, EN, RW_OUTPUT, RS_OUTPUT
 					endcase
 			end
 
-			else if(MODE == 4'b0001) begin			//mode = time_set
+			else if(MODE == 4'b0000) begin			//mode = time_set
 					RW_OUTPUT = 1'b0;
 					case(time_cnt)
 						0 : begin							//LINE1 작성

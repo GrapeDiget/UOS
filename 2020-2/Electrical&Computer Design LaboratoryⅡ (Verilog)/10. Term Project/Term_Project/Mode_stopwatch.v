@@ -59,7 +59,7 @@ module Mode_stopwatch(RESET, CLK, CHAR_SYNC, MODE, RW_OUTPUT, RS_OUTPUT, DATA_OU
 			pause = 1;
 		end
 		else begin
-			if(MODE == 4'b1000) begin
+			if(MODE == 4'b0000) begin
 				if(pause == 1) begin
 					if(CHAR_SYNC[1] == 1)			//B를 누르면 시간 흐름 재개
 						pause = 0;
@@ -117,7 +117,7 @@ module Mode_stopwatch(RESET, CLK, CHAR_SYNC, MODE, RW_OUTPUT, RS_OUTPUT, DATA_OU
 		if(!RESET)
 			time_cnt = 0;
 		else begin
-			if(MODE == 4'b1000) begin
+			if(MODE == 4'b0000) begin
 				if(time_cnt >= 35)
 					time_cnt = 0;
 				else
@@ -135,7 +135,7 @@ module Mode_stopwatch(RESET, CLK, CHAR_SYNC, MODE, RW_OUTPUT, RS_OUTPUT, DATA_OU
 			DATA_OUTPUT = 8'b00000010;	
 		end
 		else begin
-			if(MODE == 4'b1000) begin					//mode = stopwatch
+			if(MODE == 4'b0000) begin					//mode = stopwatch
 				RW_OUTPUT = 1'b0;
 					case(time_cnt)
 						0 : begin							//LINE1 작성

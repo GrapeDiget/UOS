@@ -21,9 +21,9 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/OneDrive/my_xilinx/Term_Project/Mode_time_set.v";
+static const char *ng0 = "C:/Users/HO/Desktop/Term_Project/Mode_time_set.v";
 static int ng1[] = {0, 0};
-static unsigned int ng2[] = {1U, 0U};
+static unsigned int ng2[] = {0U, 0U};
 static int ng3[] = {2, 0};
 static int ng4[] = {1, 0};
 static int ng5[] = {3, 0};

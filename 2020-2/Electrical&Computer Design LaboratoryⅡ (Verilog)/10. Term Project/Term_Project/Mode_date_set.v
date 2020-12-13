@@ -53,13 +53,13 @@ module Mode_date_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, YEAR1000, YEAR100, YEAR
 		if(!RESET)
 			CURSOR = 0;
 		else begin
-			if(MODE == 4'b0011) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[2] == 1 && NUM_SYNC[3] == 0) begin
-					if(CURSOR == 6)	CURSOR = 0;
+					if(CURSOR == 7)	CURSOR = 0;
 					else					CURSOR = CURSOR + 1;
 				end
 				else if(NUM_SYNC[2] == 0 && NUM_SYNC[3] == 1) begin
-					if(CURSOR == 0)	CURSOR = 6;
+					if(CURSOR == 0)	CURSOR = 7;
 					else					CURSOR = CURSOR - 1;
 				end
 			end
@@ -77,7 +77,7 @@ module Mode_date_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, YEAR1000, YEAR100, YEAR
 			DAY = 1;
 		end
 		else begin
-			if(MODE == 4'b0011) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[0] == 1 && NUM_SYNC[1] == 0) begin
 					case (CURSOR)
 						0 : begin
@@ -85,6 +85,10 @@ module Mode_date_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, YEAR1000, YEAR100, YEAR
 								DAY = 20;
 							else if(DAY == 9 || DAY == 19 || DAY == 29)
 								DAY = DAY - 9;
+							else if(DAY == 30 && (MONTH == 4 || MONTH == 6 || MONTH == 9 || MONTH == 11))
+								DAY = DAY;
+							else if(DAY == 31)
+								DAY = 30;
 							else	DAY = DAY + 1;
 						end
 						1 : begin
@@ -134,6 +138,10 @@ module Mode_date_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, YEAR1000, YEAR100, YEAR
 								DAY = 28;
 							else if(DAY == 0 || DAY == 10 || DAY == 20)
 								DAY = DAY + 9;
+							else if(DAY == 30 && (MONTH == 4 || MONTH == 6 || MONTH == 9 || MONTH == 11))
+								DAY = DAY;
+							else if(DAY == 31)
+								DAY = 30;
 							else	DAY = DAY - 1;
 						end
 						1 : begin

@@ -5,6 +5,12 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"C:/Users/HO/Desktop/Term_Project/Mode_world_time.v" Line 257: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/HO/Desktop/Term_Project/Mode_world_time.v" Line 257: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">NUMBER</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">100</arg>-bit.
+</msg>
+
 <msg type="warning" file="Simulator" num="0" delta="unknown" >Unable to copy libPortabilityNOSH.dll to the simulation executable directory: <arg fmt="%s" index="1">boost::filesystem::copy_file: ￁￶￁ﾤﾵ￈ ﾰ￦ﾷￎﾸﾦ ￃﾣ￀ﾻ ﾼ￶ ﾾ￸ﾽ￀ﾴￏﾴ￙, &quot;isim\Term_Project_tb_isim_beh.exe.sim\libPortability.dll&quot;</arg>.
 </msg>
 

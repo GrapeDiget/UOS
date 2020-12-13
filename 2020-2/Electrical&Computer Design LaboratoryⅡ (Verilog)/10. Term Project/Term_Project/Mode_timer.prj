@@ -1,0 +1,4 @@
+verilog work "Number_to_code.v"
+verilog work "Mode_timer_set.v"
+verilog work "Clock_sep.v"
+verilog work "Mode_timer.v"

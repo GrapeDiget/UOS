@@ -11,7 +11,21 @@
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">M0/M1/MERIDIEM_not000111</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M0/MERIDIEM_not0001_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="249" delta="old" >The following adjacent carry multiplexers occupy different slice components.  The resulting carry chain will have suboptimal timing.
+	<arg fmt="%s" index="1">M8/Mcompar_stopwatch_cnt_cmp_ge0000_cy&lt;10&gt;</arg>
+	<arg fmt="%s" index="2">M8/Mcount_stopwatch_cnt_cy&lt;0&gt;</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M9/M10/CURSOR_cmp_eq00001</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M0/DATA_OUTPUT_mux0000&lt;2&gt;164_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M9/M10/CURSOR_cmp_eq00001</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M0/DATA_OUTPUT_mux0000&lt;4&gt;1132_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M9/M10/CURSOR_cmp_eq00001</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M2/DATA_OUTPUT_mux0000&lt;5&gt;859_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M9/M10/CURSOR_cmp_eq00001</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M8/DATA_OUTPUT_mux0000&lt;3&gt;42_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 </messages>

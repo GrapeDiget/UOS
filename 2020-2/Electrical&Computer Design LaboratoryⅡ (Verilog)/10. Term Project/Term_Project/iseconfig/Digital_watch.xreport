@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-12-10T18:00:15</DateModified>
+  <DateModified>2020-12-13T18:15:52</DateModified>
   <ModuleName>Digital_watch</ModuleName>
   <SummaryTimeStamp>2020-12-01T14:03:09</SummaryTimeStamp>
-  <SavedFilePath>E:/OneDrive/my_xilinx/Term_Project/iseconfig/Digital_watch.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/OneDrive/my_xilinx/Term_Project\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/HO/Desktop/Term_Project/iseconfig/Digital_watch.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/HO/Desktop/Term_Project\</ImplementationReportsDirectory>
   <DateInitialized>2020-11-30T22:03:57</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

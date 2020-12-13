@@ -30,7 +30,7 @@ module Mode_alarm_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, MERIDIEM, HOUR, MIN, S
 		if(!RESET)
 			CURSOR = 0;
 		else begin
-			if(MODE == 4'b0101) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[2] == 1 && NUM_SYNC[3] == 0) begin
 					if(CURSOR == 6)	CURSOR = 0;
 					else					CURSOR = CURSOR + 1;
@@ -52,7 +52,7 @@ module Mode_alarm_set(RESET, CLK, NUM_SYNC, MODE, CURSOR, MERIDIEM, HOUR, MIN, S
 			SEC = 0;
 		end
 		else begin
-			if(MODE == 4'b0101) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[0] == 1 && NUM_SYNC[1] == 0) begin
 					case (CURSOR)
 						0 : begin

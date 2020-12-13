@@ -45,25 +45,25 @@ Setup/Hold to clock CLK_1k
              |Max Setup to|Max Hold to |                  | Clock  |
 Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 -------------+------------+------------+------------------+--------+
-BUS_INPUT<0> |    4.283(R)|   -1.064(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<1> |    4.173(R)|   -0.976(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<2> |    3.621(R)|   -0.163(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<3> |    5.252(R)|   -0.397(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<4> |    5.077(R)|   -1.209(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<5> |    5.231(R)|   -1.332(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<6> |    4.889(R)|   -0.073(R)|LCD_E_OBUF        |   0.000|
-BUS_INPUT<7> |    4.846(R)|   -0.215(R)|LCD_E_OBUF        |   0.000|
-CHAR_INPUT<0>|    1.576(F)|    0.737(F)|LCD_E_OBUF        |   0.000|
-CHAR_INPUT<1>|    1.610(F)|    0.821(F)|LCD_E_OBUF        |   0.000|
-CHAR_INPUT<2>|    2.021(F)|    0.230(F)|LCD_E_OBUF        |   0.000|
-CHAR_INPUT<3>|    2.274(F)|    0.080(F)|LCD_E_OBUF        |   0.000|
-CHAR_INPUT<4>|    2.123(F)|    0.212(F)|LCD_E_OBUF        |   0.000|
-CHAR_INPUT<5>|    1.640(F)|    0.817(F)|LCD_E_OBUF        |   0.000|
-NUM_INPUT<0> |    3.311(F)|    0.264(F)|LCD_E_OBUF        |   0.000|
-NUM_INPUT<1> |    3.150(F)|   -0.275(F)|LCD_E_OBUF        |   0.000|
-NUM_INPUT<2> |    3.755(F)|   -0.641(F)|LCD_E_OBUF        |   0.000|
-NUM_INPUT<3> |    2.633(F)|   -0.022(F)|LCD_E_OBUF        |   0.000|
-RESET        |   11.479(R)|   -2.199(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<0> |    2.619(R)|   -0.196(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<1> |    2.628(R)|   -0.334(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<2> |    2.522(R)|    0.663(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<3> |    2.309(R)|    0.531(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<4> |    3.538(R)|   -0.190(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<5> |    3.369(R)|   -0.055(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<6> |    2.279(R)|    0.485(R)|LCD_E_OBUF        |   0.000|
+BUS_INPUT<7> |    2.120(R)|    0.531(R)|LCD_E_OBUF        |   0.000|
+CHAR_INPUT<0>|    3.850(F)|   -0.679(F)|LCD_E_OBUF        |   0.000|
+CHAR_INPUT<1>|    2.842(F)|   -0.166(F)|LCD_E_OBUF        |   0.000|
+CHAR_INPUT<2>|    2.588(F)|    0.019(F)|LCD_E_OBUF        |   0.000|
+CHAR_INPUT<3>|    2.233(F)|    0.071(F)|LCD_E_OBUF        |   0.000|
+CHAR_INPUT<4>|    1.635(F)|    0.511(F)|LCD_E_OBUF        |   0.000|
+CHAR_INPUT<5>|    1.307(F)|    0.769(F)|LCD_E_OBUF        |   0.000|
+NUM_INPUT<0> |    4.276(F)|   -0.612(F)|LCD_E_OBUF        |   0.000|
+NUM_INPUT<1> |    2.848(F)|    0.088(F)|LCD_E_OBUF        |   0.000|
+NUM_INPUT<2> |    3.459(F)|   -0.108(F)|LCD_E_OBUF        |   0.000|
+NUM_INPUT<3> |    3.631(F)|   -0.317(F)|LCD_E_OBUF        |   0.000|
+RESET        |    9.549(R)|   -2.583(R)|LCD_E_OBUF        |   0.000|
 -------------+------------+------------+------------------+--------+
 
 Clock CLK_1M to Pad
@@ -71,7 +71,7 @@ Clock CLK_1M to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-PIEZO       |   10.731(R)|CLK_1M_BUFGP      |   0.000|
+PIEZO       |   11.571(R)|CLK_1M_BUFGP      |   0.000|
 ------------+------------+------------------+--------+
 
 Clock CLK_1k to Pad
@@ -79,16 +79,16 @@ Clock CLK_1k to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-LCD_DATA<0> |    9.546(R)|LCD_E_OBUF        |   0.000|
-LCD_DATA<1> |    9.862(R)|LCD_E_OBUF        |   0.000|
-LCD_DATA<2> |    9.547(R)|LCD_E_OBUF        |   0.000|
-LCD_DATA<3> |    9.197(R)|LCD_E_OBUF        |   0.000|
-LCD_DATA<4> |    8.379(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<0> |    8.379(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<1> |    9.930(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<2> |    9.313(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<3> |    9.888(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<4> |    9.132(R)|LCD_E_OBUF        |   0.000|
 LCD_DATA<5> |    8.379(R)|LCD_E_OBUF        |   0.000|
-LCD_DATA<6> |    9.205(R)|LCD_E_OBUF        |   0.000|
-LCD_DATA<7> |    9.216(R)|LCD_E_OBUF        |   0.000|
-LCD_RS      |    9.205(R)|LCD_E_OBUF        |   0.000|
-LCD_RW      |    9.216(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<6> |   10.266(R)|LCD_E_OBUF        |   0.000|
+LCD_DATA<7> |    9.932(R)|LCD_E_OBUF        |   0.000|
+LCD_RS      |    9.821(R)|LCD_E_OBUF        |   0.000|
+LCD_RW      |    9.775(R)|LCD_E_OBUF        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK_1M
@@ -96,8 +96,8 @@ Clock to Setup on destination clock CLK_1M
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_1M         |    9.454|         |         |         |
-CLK_1k         |    7.761|         |         |         |
+CLK_1M         |   10.108|         |         |         |
+CLK_1k         |    7.069|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK_1k
@@ -105,7 +105,7 @@ Clock to Setup on destination clock CLK_1k
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_1k         |   11.481|    9.183|         |    3.531|
+CLK_1k         |   11.975|    8.541|         |    3.125|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -116,7 +116,7 @@ CLK_1k         |LCD_E          |    9.329|
 ---------------+---------------+---------+
 
 
-Analysis completed Thu Dec 10 18:47:16 2020 
+Analysis completed Sun Dec 13 18:28:07 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:

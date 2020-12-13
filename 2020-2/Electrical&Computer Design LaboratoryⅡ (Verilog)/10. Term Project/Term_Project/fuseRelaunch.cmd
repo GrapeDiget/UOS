@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb_isim_beh.exe" -prj "E:/OneDrive/my_xilinx/Term_Project/Term_Project_tb_beh.prj" "work.Term_Project_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/HO/Desktop/Term_Project/Term_Project_tb_isim_beh.exe" -prj "C:/Users/HO/Desktop/Term_Project/Term_Project_tb_beh.prj" "work.Term_Project_tb" "work.glbl" 

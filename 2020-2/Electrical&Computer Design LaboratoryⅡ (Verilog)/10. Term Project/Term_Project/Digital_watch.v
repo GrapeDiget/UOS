@@ -117,21 +117,28 @@ module Digital_watch(RESET, CLK_1k, CLK_1M, BUS_INPUT, NUM_INPUT, CHAR_INPUT, LC
 	wire world_rw, world_rs;
 	wire [7:0] world_data;
 	
-	wire stopwach_rw, stopwatch_rs;
+	wire stopwatch_rw, stopwatch_rs;
 	wire [7:0] stopwatch_data;
+	
+	wire timer_rw, timer_rs;
+	wire [7:0] timer_data;
 	
 	//Mode_time 으로부터 출력받는 현재 시간 정보
 	reg program_en;
 	wire meridiem;
 	wire [6:0] hour, min, sec;
 	
+	//Mode_timer로 부터 출력받는 멜로디 시작 신호
+	wire timer_sound;
+	
 	//하위모듈로부터 출력 반환
 	//---------------------------------------------------------------------------
-	Mode_time  M0 (RESET, CLK_1k, num_sync, char_sync[1:0], mode, program_en, main_rw, main_rs, main_data, meridiem, hour, min, sec);
-	Mode_date  M2 (RESET, CLK_1k, num_sync, mode, meridiem, hour, min, sec, date_rw, date_rs, date_data);
-	Mode_alarm M4 (RESET, CLK_1k, CLK_1M, num_sync, char_sync[2], mode, meridiem, hour, min, sec, alarm_rw, alarm_rs, alarm_data, PIEZO);
+	Mode_time       M0 (RESET, CLK_1k, num_sync, char_sync[1:0], mode, program_en, main_rw, main_rs, main_data, meridiem, hour, min, sec);
+	Mode_date       M2 (RESET, CLK_1k, num_sync, mode, meridiem, hour, min, sec, date_rw, date_rs, date_data);
+	Mode_alarm      M4 (RESET, CLK_1k, CLK_1M, num_sync, char_sync[2], mode, meridiem, hour, min, sec, timer_sound, alarm_rw, alarm_rs, alarm_data, PIEZO);
 	Mode_world_time M7 (RESET, CLK_1k, num_sync[3:2], mode, meridiem, hour, min, sec, world_rw, world_rs, world_data);
 	Mode_stopwatch  M8 (RESET, CLK_1k, char_sync[1:0], mode, stopwatch_rw, stopwatch_rs, stopwatch_data);
+	Mode_timer		 M9 (RESET, CLK_1k, num_sync, mode, char_sync[2:0], timer_sound, timer_rw, timer_rs, timer_data);
 	//---------------------------------------------------------------------------
 	
 	//메인 출력 LCD_DATA와 연결될 중간 값
@@ -191,6 +198,16 @@ module Digital_watch(RESET, CLK_1k, CLK_1M, BUS_INPUT, NUM_INPUT, CHAR_INPUT, LC
 					output_rw = stopwatch_rw;
 					output_rs = stopwatch_rs;
 					output_data = stopwatch_data;
+				end
+				timer : begin
+					output_rw = timer_rw;
+					output_rs = timer_rs;
+					output_data = timer_data;
+				end
+				timer_set : begin
+					output_rw = timer_rw;
+					output_rs = timer_rs;
+					output_data = timer_data;
 				end
 
 

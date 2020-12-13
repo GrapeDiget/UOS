@@ -303,3 +303,38 @@ xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -o
 xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
 xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
 xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Term_Project.ucf -p xc3s200-pq208-4 Digital_watch.ngc Digital_watch.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Digital_watch_map.ncd Digital_watch.ngd Digital_watch.pcf 
+par -w -intstyle ise -ol high -t 1 Digital_watch_map.ncd Digital_watch.ncd Digital_watch.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Digital_watch.twx Digital_watch.ncd -o Digital_watch.twr Digital_watch.pcf -ucf Term_Project.ucf 
+bitgen -intstyle ise -f Digital_watch.ut Digital_watch.ncd 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.xst" -ofn "E:/OneDrive/my_xilinx/Term_Project/Digital_watch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Term_Project.ucf -p xc3s200-pq208-4 Digital_watch.ngc Digital_watch.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Digital_watch_map.ncd Digital_watch.ngd Digital_watch.pcf 
+par -w -intstyle ise -ol high -t 1 Digital_watch_map.ncd Digital_watch.ncd Digital_watch.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Digital_watch.twx Digital_watch.ncd -o Digital_watch.twr Digital_watch.pcf -ucf Term_Project.ucf 
+bitgen -intstyle ise -f Digital_watch.ut Digital_watch.ncd 
+xst -intstyle ise -ifn "C:/Users/HO/Desktop/Term_Project/Digital_watch.xst" -ofn "C:/Users/HO/Desktop/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "C:/Users/HO/Desktop/Term_Project/Digital_watch.xst" -ofn "C:/Users/HO/Desktop/Term_Project/Digital_watch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Term_Project.ucf -p xc3s200-pq208-4 Digital_watch.ngc Digital_watch.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Digital_watch_map.ncd Digital_watch.ngd Digital_watch.pcf 
+par -w -intstyle ise -ol high -t 1 Digital_watch_map.ncd Digital_watch.ncd Digital_watch.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Digital_watch.twx Digital_watch.ncd -o Digital_watch.twr Digital_watch.pcf -ucf Term_Project.ucf 
+bitgen -intstyle ise -f Digital_watch.ut Digital_watch.ncd 
+xst -intstyle ise -ifn "C:/Users/HO/Desktop/Term_Project/Digital_watch.xst" -ofn "C:/Users/HO/Desktop/Term_Project/Digital_watch.syr" 
+xst -intstyle ise -ifn "C:/Users/HO/Desktop/Term_Project/Digital_watch.xst" -ofn "C:/Users/HO/Desktop/Term_Project/Digital_watch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Term_Project.ucf -p xc3s200-pq208-4 Digital_watch.ngc Digital_watch.ngd  
+map -intstyle ise -p xc3s200-pq208-4 -cm area -ir off -pr off -c 100 -o Digital_watch_map.ncd Digital_watch.ngd Digital_watch.pcf 
+par -w -intstyle ise -ol high -t 1 Digital_watch_map.ncd Digital_watch.ncd Digital_watch.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Digital_watch.twx Digital_watch.ncd -o Digital_watch.twr Digital_watch.pcf -ucf Term_Project.ucf 
+bitgen -intstyle ise -f Digital_watch.ut Digital_watch.ncd 

@@ -9,13 +9,26 @@ Target Device  : xc3s200
 Target Package : pq208
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Thu Dec 10 18:46:48 2020
+Mapped Date    : Sun Dec 13 18:27:35 2020
 
 Mapping design into LUTs...
 Running directed packing...
-WARNING:Pack:266 - The function generator M0/M1/MERIDIEM_not000111 failed to
-   merge with F5 multiplexer M0/MERIDIEM_not0001_f5.  There is a conflict for
-   the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
+   slice components.  The resulting carry chain will have suboptimal timing.
+   	M8/Mcompar_stopwatch_cnt_cmp_ge0000_cy<10>
+   	M8/Mcount_stopwatch_cnt_cy<0>
+WARNING:Pack:266 - The function generator M9/M10/CURSOR_cmp_eq00001 failed to
+   merge with F5 multiplexer M0/DATA_OUTPUT_mux0000<2>164_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator M9/M10/CURSOR_cmp_eq00001 failed to
+   merge with F5 multiplexer M0/DATA_OUTPUT_mux0000<4>1132_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator M9/M10/CURSOR_cmp_eq00001 failed to
+   merge with F5 multiplexer M2/DATA_OUTPUT_mux0000<5>859_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator M9/M10/CURSOR_cmp_eq00001 failed to
+   merge with F5 multiplexer M8/DATA_OUTPUT_mux0000<3>42_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -25,18 +38,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    5
 Logic Utilization:
-  Number of Slice Flip Flops:           531 out of   3,840   13%
-  Number of 4 input LUTs:             2,655 out of   3,840   69%
+  Number of Slice Flip Flops:           655 out of   3,840   17%
+  Number of 4 input LUTs:             2,952 out of   3,840   76%
 Logic Distribution:
-  Number of occupied Slices:          1,514 out of   1,920   78%
-    Number of Slices containing only related logic:   1,514 out of   1,514 100%
-    Number of Slices containing unrelated logic:          0 out of   1,514   0%
+  Number of occupied Slices:          1,697 out of   1,920   88%
+    Number of Slices containing only related logic:   1,697 out of   1,697 100%
+    Number of Slices containing unrelated logic:          0 out of   1,697   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,875 out of   3,840   74%
-    Number used as logic:             2,655
-    Number used as a route-thru:        220
+  Total Number of 4 input LUTs:       3,183 out of   3,840   82%
+    Number used as logic:             2,952
+    Number used as a route-thru:        231
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -44,7 +57,7 @@ Logic Distribution:
   Number of bonded IOBs:                 33 out of     141   23%
   Number of BUFGMUXs:                     2 out of       8   25%
 
-Average Fanout of Non-Clock Nets:                4.11
+Average Fanout of Non-Clock Nets:                4.14
 
 Peak Memory Usage:  4401 MB
 Total REAL time to MAP completion:  2 secs 

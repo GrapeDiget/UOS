@@ -91,15 +91,26 @@ module Mode_date(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_OUTPUT
 	
 	//날짜의 경과를 제어
 	reg tomorrow;
+	reg tomorrow_cnt;
 	
 	always @(negedge RESET or posedge CLK) begin
-		if(!RESET) 
+		if(!RESET) begin
 			tomorrow = 0;
-		else begin									//mode != time_set이고 오후 11시 59분 59초일때 하루가 경과
-				if(SEC >= 59 && MIN >= 59 && HOUR >= 11 && MERIDIEM >= 1 && MODE != 4'b0001)
-					tomorrow = 1;
-				else
+			tomorrow_cnt = 0;
+		end
+		else begin									//mode != time_set이고 오후 11시 59분 59초999일때 하루가 경과
+				if(SEC >= 59 && MIN >= 59 && HOUR >= 11 && MERIDIEM >= 1 && MODE != 4'b0000) begin
+					if(tomorrow_cnt >= 999) begin
+						tomorrow = 1;
+						tomorrow_cnt = 0;
+					end
+					else
+						tomorrow_cnt = tomorrow_cnt + 1;
+				end
+				else begin
 					tomorrow = 0;
+					tomorrow_cnt = 0;
+				end
 		end
 	end
 	
@@ -114,7 +125,7 @@ module Mode_date(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_OUTPUT
 			day = 1;
 		end
 		else begin
-			if(MODE == 4'b0011) begin 			//mode = date_set이면 시간값에 date_set 모듈의 출력을 입력
+			if(MODE == 4'b0000) begin 			//mode = date_set이면 시간값에 date_set 모듈의 출력을 입력
 				year_1000 = year1000_set;
 				year_100 = year100_set;
 				year_10 = year10_set;
@@ -175,7 +186,7 @@ module Mode_date(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_OUTPUT
 		if(!RESET)
 			cnt = 0;
 		else begin
-			if(MODE == 4'b0010 || MODE == 4'b0011) begin
+			if(MODE == 4'b0000 || MODE == 4'b0000) begin
 				if(cnt >= 35)
 					cnt = 0;
 				else
@@ -193,7 +204,7 @@ module Mode_date(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_OUTPUT
 			DATA_OUTPUT = 8'b00000010;	
 		end
 		else begin
-			if(MODE == 4'b0010) begin					//mode = date
+			if(MODE == 4'b0000) begin					//mode = date
 				RW_OUTPUT = 1'b0;
 					case(cnt)
 						0 : begin							//LINE1 작성
@@ -339,7 +350,7 @@ module Mode_date(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_OUTPUT
 					endcase
 			end
 
-			else if(MODE == 4'b0011) begin			//mode = date_set
+			else if(MODE == 4'b0000) begin			//mode = date_set
 					RW_OUTPUT = 1'b0;
 					case(cnt)
 						0 : begin							//LINE1 작성

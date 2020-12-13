@@ -91,7 +91,7 @@ module Mode_world_time(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_
 		if(!RESET)
 			location = gmt;
 		else begin
-			if(MODE == 4'b0111) begin
+			if(MODE == 4'b0000) begin
 				if(NUM_SYNC[2] == 1 && NUM_SYNC[3] == 0) begin
 					if(location == gmt)	location = rai;
 					else						location = location + 1;
@@ -370,7 +370,7 @@ module Mode_world_time(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_
 			colon = 0;
 		end
 		else begin
-			if(MODE == 4'b0111) begin
+			if(MODE == 4'b0000) begin
 				if(cnt >= 999) begin		  
 					cnt = 0;	colon = 0;
 				end
@@ -394,7 +394,7 @@ module Mode_world_time(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_
 		if(!RESET)
 			time_cnt = 0;
 		else begin
-			if(MODE == 4'b0111) begin
+			if(MODE == 4'b0000) begin
 				if(time_cnt >= 35)
 					time_cnt = 0;
 				else
@@ -412,7 +412,7 @@ module Mode_world_time(RESET, CLK, NUM_SYNC, MODE, MERIDIEM, HOUR, MIN, SEC, RW_
 			DATA_OUTPUT = 8'b00000010;
 		end
 		else begin
-			if(MODE == 4'b0111) begin					//mode = world_time
+			if(MODE == 4'b0000) begin					//mode = world_time
 				RW_OUTPUT = 1'b0;
 					case(time_cnt)
 						0 : begin							//LINE1 ¿€º∫
