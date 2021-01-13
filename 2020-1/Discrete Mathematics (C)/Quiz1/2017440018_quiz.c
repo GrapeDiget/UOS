@@ -1,5 +1,5 @@
-// ÇÕ¼º¸íÁ¦ ÄûÁî 
-// ÀüÀÚÀü±âÄÄÇ»ÅÍ°øÇĞºÎ 2017440018 ±è¹ÎÈ£
+// í•©ì„±ëª…ì œ í€´ì¦ˆ 
+// ì „ìì „ê¸°ì»´í“¨í„°ê³µí•™ë¶€ 2017440018 ê¹€ë¯¼í˜¸
 // 2017440018_quiz.c
 
 #include<stdio.h>
@@ -18,21 +18,22 @@ char Calculation(char oper, char *stack_oper, char *stack_prop, int *top_oper, i
 
 int main()
 {
-	//ÇÕ¼º¸íÁ¦ P^Q@~R=S>QvR@Q>S
+	//í•©ì„±ëª…ì œ P^Q@~R=S>QvR@Q>S
 	char comp[30];
 	char p, q, r, s;
 	int i;
 	int row, col, find_row, find_col;
 	char oper, val, result;
 	
-	//½ºÅÃ Á¤ÀÇ 
+	//ìŠ¤íƒ ì •ì˜
+	//test
 	char stack_oper[30] = {};
 	char stack_prop[30] = {};
 	int top_oper, top_prop;
 	
 	top_oper = top_prop = 0;
 	
-	//³í¸®¿¬»êÀÚ ¿ì¼±¼øÀ§Ç¥
+	//ë…¼ë¦¬ì—°ì‚°ì ìš°ì„ ìˆœìœ„í‘œ
 	char priority[7][7] = {{' ', '~', '^', 'v', '@', '>', '='},
 						   {'~', '<', '>', '>', '>', '>', '>'},
 						   {'^', '<', '>', '>', '>', '>', '>'},
@@ -41,23 +42,23 @@ int main()
 						   {'>', '<', '<', '<', '<', '>', '>'},
 						   {'=', '<', '<', '<', '<', '<', '>'}};
 
-	//ÇÕ¼º¸íÁ¦ ÀÔ·Â 
-	printf("Compound ¸íÁ¦ : ");
+	//í•©ì„±ëª…ì œ ì…ë ¥ 
+	printf("Compound ëª…ì œ : ");
 	fgets(comp, sizeof(comp), stdin);
 	
-	//ÀÔ·Â¹ŞÀº ÇÕ¼º¸íÁ¦ Ãâ·Â 
-	printf("ÇÕ¼º¸íÁ¦ : %s \n", comp); 
+	//ì…ë ¥ë°›ì€ í•©ì„±ëª…ì œ ì¶œë ¥ 
+	printf("í•©ì„±ëª…ì œ : %s \n", comp); 
 	
-	//ÇÕ¼º¸íÁ¦ Çà·ÄÀÇ ±æÀÌ Ãâ·Â 
+	//í•©ì„±ëª…ì œ í–‰ë ¬ì˜ ê¸¸ì´ ì¶œë ¥ 
 	printf("len = %d \n", strlen(comp)-1);
 	
-	//ÇÕ¼º¸íÁ¦ Çà·Ä ºĞÇØ 
+	//í•©ì„±ëª…ì œ í–‰ë ¬ ë¶„í•´ 
 	for(i=0; i<strlen(comp)-1; i++)	{
 		printf("comp[%i] = %c \n", i, comp[i]);
 	}
 	printf("\n");
 	
-	//¸íÁ¦ ÀÔ·Â 
+	//ëª…ì œ ì…ë ¥ 
 	printf("Proposition P: ");
 	p=getchar();
 	getchar();
@@ -68,7 +69,7 @@ int main()
 		p = 'F';
 	}
 	else	{
-		printf("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù."); 
+		printf("ì˜ëª»ëœ ê°’ì„ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤."); 
 		return 0;
 	}
 	
@@ -82,7 +83,7 @@ int main()
 		q = 'F';
 	}
 	else {
-		printf("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+		printf("ì˜ëª»ëœ ê°’ì„ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		return 0;
 	}
 	
@@ -96,7 +97,7 @@ int main()
 		r = 'F';
 	}
 	else {
-		printf("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+		printf("ì˜ëª»ëœ ê°’ì„ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		return 0;
 	}
 	
@@ -110,34 +111,34 @@ int main()
 		s = 'F';
 	}
 	else {
-		printf("Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+		printf("ì˜ëª»ëœ ê°’ì„ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 		return 0;
 	}	
 	printf("P= %c, Q= %c, R= %c, S= %c \n\n", p, q, r, s);
 
-	//ÀÔ·ÂµÈ ÇÕ¼º¸íÁ¦ Çà·ÄÀ» ½ºÅÃ¿¡ push/popÇÏ¸ç °è»ê
+	//ì…ë ¥ëœ í•©ì„±ëª…ì œ í–‰ë ¬ì„ ìŠ¤íƒì— push/popí•˜ë©° ê³„ì‚°
 	for(i=0; i<strlen(comp)-1; i++)	{
-		//¿¬»êÀÚ ½ºÅÃ, ¸íÁ¦ ½ºÅÃ Ãâ·Â
+		//ì—°ì‚°ì ìŠ¤íƒ, ëª…ì œ ìŠ¤íƒ ì¶œë ¥
 		Print_Stack(stack_oper, stack_prop, &top_oper, &top_prop);
 		
-		//ÀÔ·ÂµÈ °ªÀÌ ¿¬»êÀÚÀÎÁö ¸íÁ¦ÀÎÁö ÆÇ´Ü 
+		//ì…ë ¥ëœ ê°’ì´ ì—°ì‚°ìì¸ì§€ ëª…ì œì¸ì§€ íŒë‹¨ 
 		if(comp[i] == 'P' || comp[i] == 'Q' || comp[i] == 'R'|| comp[i] == 'S') {
-			//¸íÁ¦ ½ºÅÃ¿¡ push
+			//ëª…ì œ ìŠ¤íƒì— push
 			Push(comp[i], stack_prop, &top_prop);
 		}
 		else {
 			if(comp[i] == '~' || comp[i] == '^' || comp[i] == 'v' || comp[i] == '@' || comp[i] == '>' || comp[i] == '=') {
-				//¿¬»êÀÚ ½ºÅÃ¿¡ ÀÛ¾÷ 
-				//¿¬»êÀÚ ½ºÅÃÀÌ ºñ¾îÀÖÀ¸¸é push
+				//ì—°ì‚°ì ìŠ¤íƒì— ì‘ì—… 
+				//ì—°ì‚°ì ìŠ¤íƒì´ ë¹„ì–´ìˆìœ¼ë©´ push
 				while(1) {
 					if(top_oper == 0) {
-						//¿¬»êÀÚ ½ºÅÃ¿¡ push 
+						//ì—°ì‚°ì ìŠ¤íƒì— push 
 						Push(comp[i], stack_oper, &top_oper);
 						break;
 					}
 					else {
-						//¿¬»êÀÚ ½ºÅÃÀÌ ºñ¾îÀÖÁö ¾ÊÀ½ 
-						//¿¬»êÀÚ ¿ì¼±¼øÀ§ ºñ±³
+						//ì—°ì‚°ì ìŠ¤íƒì´ ë¹„ì–´ìˆì§€ ì•ŠìŒ 
+						//ì—°ì‚°ì ìš°ì„ ìˆœìœ„ ë¹„êµ
 						for(row = 1; row < 7; row++) {
 							if(comp[i] == priority[0][row]) {
 								find_row = row;
@@ -150,20 +151,20 @@ int main()
 											
 						}
 						if(priority[find_col][find_row] == '>') {
-							//¿¬»êÀÚ ½ºÅÃ¿¡ ÀÖ´Â ¿¬»êÀÚ°¡ ¿ì¼±¼øÀ§°¡ ³ô´Ù
-							//1. ¿¬»êÀÚ ½ºÅÃ¿¡¼­ pop
+							//ì—°ì‚°ì ìŠ¤íƒì— ìˆëŠ” ì—°ì‚°ìê°€ ìš°ì„ ìˆœìœ„ê°€ ë†’ë‹¤
+							//1. ì—°ì‚°ì ìŠ¤íƒì—ì„œ pop
 							oper = Pop(stack_oper, &top_oper);
-							//2. popÇÑ ¿¬»êÀÚ·Î ¸íÁ¦ stack¿¡¼­ ÀûÀıÈ÷ popÇÑ ÈÄ °è»ê
+							//2. popí•œ ì—°ì‚°ìë¡œ ëª…ì œ stackì—ì„œ ì ì ˆíˆ popí•œ í›„ ê³„ì‚°
 							val = Calculation(oper, stack_oper, stack_prop, &top_oper, &top_prop, p, q, r, s);
-							//3. °è»ê °á°ú¸¦ ¸íÁ¦ ½ºÅÃ¿¡ push 
+							//3. ê³„ì‚° ê²°ê³¼ë¥¼ ëª…ì œ ìŠ¤íƒì— push 
 							Push(val, stack_prop, &top_prop);
 							Print_Stack(stack_oper, stack_prop, &top_oper, &top_prop); 
-							//4. ÀÔ·Â ¿¬»êÀÚ¿Í »õ·Î¿î ¿ø·¡ÀÇ ¿¬»êÀÚ ½ºÅÃÀ» ºñ±³ÇÏ±â À§ÇØ ¹İº¹
+							//4. ì…ë ¥ ì—°ì‚°ìì™€ ìƒˆë¡œìš´ ì›ë˜ì˜ ì—°ì‚°ì ìŠ¤íƒì„ ë¹„êµí•˜ê¸° ìœ„í•´ ë°˜ë³µ
 							continue;
 						}
 						else {
-							//ÀÔ·Â ¿¬»êÀÚ°¡ ¿ì¼±¼øÀ§°¡ ³ô´Ù 
-							//¿¬»êÀÚ ½ºÅÃ¿¡ push
+							//ì…ë ¥ ì—°ì‚°ìê°€ ìš°ì„ ìˆœìœ„ê°€ ë†’ë‹¤ 
+							//ì—°ì‚°ì ìŠ¤íƒì— push
 							Push(comp[i], stack_oper, &top_oper);
 							break;
 						}
@@ -171,40 +172,40 @@ int main()
 				}
 			}	
 		}
-	}	//end for ->ÀÔ·ÂÀ» ´Ù Ã³¸®Çß´Ù 
+	}	//end for ->ì…ë ¥ì„ ë‹¤ ì²˜ë¦¬í–ˆë‹¤ 
 
-	//¿¬»êÀÚ ½ºÅÃÀÌ underflowµÉ ¶§ ±îÁö pop
-	//¿¬»êÀÚ ½ºÅÃ¿¡ µû¶ó ¸íÁ¦ stackÀ» pop 
+	//ì—°ì‚°ì ìŠ¤íƒì´ underflowë  ë•Œ ê¹Œì§€ pop
+	//ì—°ì‚°ì ìŠ¤íƒì— ë”°ë¼ ëª…ì œ stackì„ pop 
 	while(1) 
 	{
-		//¿¬»êÀÚ ½ºÅÃ, ¸íÁ¦ ½ºÅÃ Ãâ·Â
+		//ì—°ì‚°ì ìŠ¤íƒ, ëª…ì œ ìŠ¤íƒ ì¶œë ¥
 		Print_Stack(stack_oper, stack_prop, &top_oper, &top_prop);
-		//1. ¿¬»êÀÚ ½ºÅÃ¿¡¼­ pop
+		//1. ì—°ì‚°ì ìŠ¤íƒì—ì„œ pop
 		oper = Pop(stack_oper, &top_oper);
-		//2. popÇÑ ¿¬»êÀÚ·Î ¸íÁ¦ stack¿¡¼­ ÀûÀıÈ÷ popÇÑ ÈÄ °è»ê
+		//2. popí•œ ì—°ì‚°ìë¡œ ëª…ì œ stackì—ì„œ ì ì ˆíˆ popí•œ í›„ ê³„ì‚°
 		val = Calculation(oper, stack_oper, stack_prop, &top_oper, &top_prop, p, q, r, s);
-		//3. top_oper°¡ 0ÀÌ¶ó¸é underflow°¡ ÀÏ¾î³ª¹Ç·Î ¹İº¹À» Á¾·á
+		//3. top_operê°€ 0ì´ë¼ë©´ underflowê°€ ì¼ì–´ë‚˜ë¯€ë¡œ ë°˜ë³µì„ ì¢…ë£Œ
 		if(top_oper == 0) {
 			result = val;
 			break;
 		}
-		//4. top_oper°¡ 0ÀÌ ¾Æ´Ï¶ó¸é °è»ê °á°ú¸¦ ¸íÁ¦ ½ºÅÃ¿¡ push
+		//4. top_operê°€ 0ì´ ì•„ë‹ˆë¼ë©´ ê³„ì‚° ê²°ê³¼ë¥¼ ëª…ì œ ìŠ¤íƒì— push
 		else {
 			Push(val, stack_prop, &top_prop);
 		}
 	}
 	
-	//resultÀÇ °ªÀ» Ç¥½Ã
+	//resultì˜ ê°’ì„ í‘œì‹œ
 	printf("result = %c\n\n", result); 
 	
-	//¸íÁ¦ stack¶Ç´Â ¿¬»êÀÚ stackÀÇ top°¡ 0ÀÌ ¾Æ´Ï¶ó¸é ¿À·ùÀÌ¹Ç·Î ÇÁ·Î±×·¥ Á¾·á 
+	//ëª…ì œ stackë˜ëŠ” ì—°ì‚°ì stackì˜ topê°€ 0ì´ ì•„ë‹ˆë¼ë©´ ì˜¤ë¥˜ì´ë¯€ë¡œ í”„ë¡œê·¸ë¨ ì¢…ë£Œ 
 	if(top_prop != 0 || top_oper !=0) {
-		printf("¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.\n");
+		printf("ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.\n");
 		return 0;
 	}
 	
-	//°á°ú°ªÀ» Ãâ·Â 
-	printf("°á·Ğ:"); 
+	//ê²°ê³¼ê°’ì„ ì¶œë ¥ 
+	printf("ê²°ë¡ :"); 
 	for(i=0; i<strlen(comp)-1; i++)	{
 		printf("%c ", comp[i]);
 	}
@@ -213,112 +214,112 @@ int main()
 	return 0;
 }
 
-// p^q ¿¬»ê
+// p^q ì—°ì‚°
 char Conjunction(char p, char q)
 {
 	if(p == 'T' && q== 'T')	return 'T';
 	else					return 'F';
 }
 	
-// p v q ¿¬»ê
+// p v q ì—°ì‚°
 char Disjunction(char p, char q)
 {
 	if(p == 'F' && q == 'F') return 'F';
 	else 					 return 'T';
 }
 
-// ~p ¿¬»ê
+// ~p ì—°ì‚°
 char Negation(char p)
 {
 	if(p == 'T') return 'F';
 	else		 return 'T';	
 }
 
-// p -> q ¿¬»ê
+// p -> q ì—°ì‚°
 char Implication(char p, char q)
 {
 	if(p == 'T' && q=='F') return 'F';
 	else				   return 'T';
 }
 
-// p xor q ¿¬»ê
+// p xor q ì—°ì‚°
 char Exclusive_or(char p, char q)
 {
 	if(p == q)	return 'F';
 	else		return 'T';
 }
 
-// p <=> q ¿¬»ê
+// p <=> q ì—°ì‚°
 char Equivalence(char p, char q)
 {
 	if(p == q)	return 'T';
 	else		return 'F';
 }
 
-//¿¬»êÀÚ ½ºÅÃ°ú ¸íÁ¦ ½ºÅÃÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
+//ì—°ì‚°ì ìŠ¤íƒê³¼ ëª…ì œ ìŠ¤íƒì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 void Print_Stack(char *stack_oper, char *stack_prop, int *top_oper, int *top_prop)
 {
 	int j;
-	//¿¬»êÀÚ ½ºÅÃ Ãâ·Â 
-	printf("¿¬»êÀÚ ½ºÅÃ: "); 
+	//ì—°ì‚°ì ìŠ¤íƒ ì¶œë ¥ 
+	printf("ì—°ì‚°ì ìŠ¤íƒ: "); 
 	for(j=0; j<*top_oper; j++) {
 		printf("%c ",stack_oper[j]);
 	}
 	printf("\n");
-	//¸íÁ¦ ½ºÅÃ Ãâ·Â 
-	printf("¸íÁ¦ ½ºÅÃ: "); 
+	//ëª…ì œ ìŠ¤íƒ ì¶œë ¥ 
+	printf("ëª…ì œ ìŠ¤íƒ: "); 
 	for(j=0; j<*top_prop; j++) {
 		printf("%c ",stack_prop[j]);
 	}
 	printf("\n\n");
 }
 
-//push ÇÔ¼ö
+//push í•¨ìˆ˜
 void Push(char push, char *stack, int *top)
 {
-	//ÀÔ·ÂµÈ stackÀÇ ¹è¿­ÀÇ topÀ§Ä¡¿¡ push°ªÀ» push 
+	//ì…ë ¥ëœ stackì˜ ë°°ì—´ì˜ topìœ„ì¹˜ì— pushê°’ì„ push 
 	stack[*top] = push; 
 	printf("push: %c\n\n",push);
-	//top¸¦ 1 Áõ°¡ 
+	//topë¥¼ 1 ì¦ê°€ 
 	(*top)++;
 }
 
-//pop ÇÔ¼ö, popÇÑ °ªÀ» returnÇÑ´Ù 
+//pop í•¨ìˆ˜, popí•œ ê°’ì„ returní•œë‹¤ 
 char Pop(char *stack, int *top)
 {
 	char pop;
-	//ÀÔ·ÂµÈ stackÀÇ ¹è¿­ÀÇ topÀ§Ä¡ÀÇ µ¥ÀÌÅÍ¸¦ pop
+	//ì…ë ¥ëœ stackì˜ ë°°ì—´ì˜ topìœ„ì¹˜ì˜ ë°ì´í„°ë¥¼ pop
 	(*top)--;
 	pop = stack[*top];
 	stack[*top] = ' ';
 	printf("pop: %c\n\n", pop);
-	//popÇÑ °ªÀ» retrun
+	//popí•œ ê°’ì„ retrun
 	return pop;
 }
 
-//oper¿¡ ¾Ë¸Â´Â °³¼öÀÇ ¸íÁ¦¸¦ popÇÑ µÚ ¿¬»êÇÏ¿© °á°ú¸¦ ¹İÈ¯ 
+//operì— ì•Œë§ëŠ” ê°œìˆ˜ì˜ ëª…ì œë¥¼ popí•œ ë’¤ ì—°ì‚°í•˜ì—¬ ê²°ê³¼ë¥¼ ë°˜í™˜ 
 char Calculation(char oper, char *stack_oper, char *stack_prop, int *top_oper, int *top_prop, char p, char q, char r, char s)
 {
 	char p1, p2, val;
-	//¿¬»êÀÚ ½ºÅÃ°ú ¸íÁ¦ ½ºÅÃ Ãâ·Â 
+	//ì—°ì‚°ì ìŠ¤íƒê³¼ ëª…ì œ ìŠ¤íƒ ì¶œë ¥ 
 	Print_Stack(stack_oper, stack_prop, &(*top_oper), &(*top_prop));
 	
-	//oper¿¡ ¾Ë¸ÂÀº °³¼öÀÇ ¸íÁ¦¸¦ pop 
+	//operì— ì•Œë§ì€ ê°œìˆ˜ì˜ ëª…ì œë¥¼ pop 
 	if(oper == '~') {
-		//´ÜÇ×¿¬»êÀÚ
-		//1. ¸íÁ¦ stack¿¡¼­ pop 1°³
+		//ë‹¨í•­ì—°ì‚°ì
+		//1. ëª…ì œ stackì—ì„œ pop 1ê°œ
 		p1 = Pop(stack_prop, &(*top_prop));
 		Print_Stack(stack_oper, stack_prop, &(*top_oper), &(*top_prop));
 		if(p1 == 'P') p1=p;
 		if(p1 == 'Q') p1=q;
 		if(p1 == 'R') p1=r;		
 		if(p1 == 'S') p1=s;	
-		//2. ³í¸® ¿¬»ê
+		//2. ë…¼ë¦¬ ì—°ì‚°
 		val = Negation(p1);
 	}
 	else {
-		//ÀÌÇ×¿¬»êÀÚ
-		//1. ¸íÁ¦ stack¿¡¼­ pop 2°³
+		//ì´í•­ì—°ì‚°ì
+		//1. ëª…ì œ stackì—ì„œ pop 2ê°œ
 		p1 = Pop(stack_prop, &(*top_prop));
 		Print_Stack(stack_oper, stack_prop, &(*top_oper), &(*top_prop));
 		if(p1 == 'P') p1=p;
@@ -331,13 +332,13 @@ char Calculation(char oper, char *stack_oper, char *stack_prop, int *top_oper, i
 		if(p2 == 'Q') p2=q;
 		if(p2 == 'R') p2=r;
 		if(p2 == 'S') p2=s;	
-		//2. ³í¸® ¿¬»ê
+		//2. ë…¼ë¦¬ ì—°ì‚°
 		if(oper == '^')	val = Conjunction(p2, p1);
 		if(oper == 'v') val = Disjunction(p2, p1);
 		if(oper == '@') val = Exclusive_or(p2, p1);
 		if(oper == '>')	val = Implication(p2, p1);
 		if(oper == '=') val = Equivalence(p2, p1);
 	}
-	//¿¬»êÇÑ °á°ú¸¦ ¹İÈ¯
+	//ì—°ì‚°í•œ ê²°ê³¼ë¥¼ ë°˜í™˜
 	return val;
 }
